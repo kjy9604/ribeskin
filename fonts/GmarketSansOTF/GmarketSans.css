@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "GmarketSans";
+    src: url(GmarketSansLight.otf),
+    url(GmarketSansLight.otf) format('otf'), url(GmarketSansTTFLight.ttf) format('ttf'),
+    url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-weight: 100;
+}
+@font-face {
+    font-family: "GmarketSans";
+    src: url(GmarketSansMedium.otf),
+    url(GmarketSansMedium.otf) format('otf'), url(GmarketSansTTFMedium.ttf) format('ttf'),
+    url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "GmarketSans";
+    src: url(GmarketSansBold.otf)
+    ,url(GmarketSansBold.otf) format('otf'), url(GmarketSansTTFLight.ttf) format('ttf'),
+    url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-weight: bold;
+}

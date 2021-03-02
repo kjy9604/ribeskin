@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+    <title>카복시사운드</title>
+    <!--    <link rel="stylesheet" href="../sde_design/skin10/css/style.css" />-->
+    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />-->
+    <link rel="stylesheet" href="css/_custom.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"
+            integrity="sha512-tcexmm0PBc+jOn9UwbgHVpjZIleEKXif1MCkzgNfVjhXKDxwYumrCOxhZ5tIaXHz2DpEE14hfjFn5J+tpaFSCg=="
+            crossorigin="anonymous"></script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"-->
+<!--            integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="-->
+<!--            crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
+</head>
+
+<!--https://codepen.io/jasonbaciulis/pen/gLXgVZ-->
+
+<body class="ko">
+<!--
+<div class="loaded-container">
+    <div class="loading-box">
+        <img src="images/item/turtle_logo.svg" alt="" class="loaded-spin rotating" /><BR><BR>
+        <img src="images/item/loading-title.svg" class="loaded-spin loading-title" />
+    </div>
+</div>
+-->
+
+<header class="pc">
+
+    <nav class="top">
+        <div class="inner_max">
+            <ul class="sns">
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+            <ul class="auth">
+                <li data-detect="login">LOGIN</li>
+                <li data-detect="signup">SIGNUP</li>
+                <li data-detect="my_account">MY ACCOUNT</li>
+                <li data-detect="cart">CART</li>
+                <li>
+                    <button id="langBtn" data-lang="en">En</button>
+<!--
+                    <button id="koBtn" data-lang="ko">Ko</button>
+                    <button id="enBtn" data-lang="en">En</button>
+-->
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="gnb">
+        <div class="inner_max">
+            <div class="logo"><img src="images/logo/logo_main.svg" alt="mainLogo" class="bottom-logo-image"></div>
+            <ul class="menu">
+                <li data-detect="main" id="main">메인</li>
+                <li data-detect="self_esthetic" id="esthetic">셀프 에스테틱</li>
+                <li data-detect="principle_of_action" id="principle">작용원리</li>
+                <li data-detect="video" id="video">영상</li>
+            </ul>
+        </div>
+    </nav>
+
+</header>
+
+<header class="mobile">
+    <nav class="mobile_nav">
+        <input type="checkbox" id="mobile_menuIcon">
+        <label for="mobile_menuIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="mobile_nav_logo">
+            <img src="images/logo/logo_mobile_white.png" alt="mobile_logo">
+        </div>
+        <div class="mobile_nav_icon" >
+            <button id="langBtnMobile" data-lang="en">En</button>
+        </div>
+    </nav>
+    <nav class="side_bar" >
+        <div class="inner_max">
+            <ul class="auth">
+                <li data-detect="signup">SIGNUP</li>
+                <li data-detect="login">LOGIN</li>
+                <li data-detect="cart">CART</li>
+                <li data-detect="my_account">MY ACCOUNT</li>
+            </ul>
+        </div>
+        <div class="inner_max">
+            <ul class="menu">
+                <li data-detect="main">메인</li>
+                <li data-detect="self_esthetic">셀프 에스테틱</li>
+                <li data-detect="principle_of_action">작용원리</li>
+                <li data-detect="video">영상</li>
+            </ul>
+        </div>
+        <div class="inner_max">
+            <div class="logo"><img src="images/icon/icon_buy_white.png" /></div>
+        </div>
+        <div class="inner_max">
+            <ul class="sns">
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="scroll_down active">
+    <p>SCROLL DOWN</p>
+    <img src="images/scroll_down.png" alt="">
+</div>
+
+<button class="go_to" data-detect="link"><a href="https://smartstore.naver.com/jmbmall/products/5417693787"></a></button>
+
+<div class="dot">
+    <ul>
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<section class="move">
+    <div class="inner_max">
+        <canvas id="bg"></canvas>
+        <canvas id="hero-lightpass"></canvas>
+        <div id='container'></div>
+
+        <div class="message_wrap">
+            <div class="inner_max">
+
+                <div class="message_box_1">
+                    <p class="m1" data-detect="main_messege_1">내 피부가 숨쉬는 소리를 들어보세요!</p>
+                    <p class="m2">Sound up your skin breathe!</p>
+                </div>
+
+                <div class="message_box_2">
+                    <div class="image_box">
+                        <img src="images/x5set.png" alt="5set">
+                    </div>
+                </div>
+
+                <div class="message_box_3">
+                    <p class="m1" data-detect="main_messege_2_1">집에서 즐기는 <span>셀프 에스테틱!</span></p>
+                    <p class="m2" data-detect="main_messege_2_2"></p>
+                </div>
+
+                <div class="message_box_4">
+                    <p class="m1" data-detect="main_messege_3_1">전문가의 손길을</p>
+                    <p class="m2" data-detect="main_messege_3_2">그대로 느낄 수 있는 <span>셀프 에스테틱!</span></p>
+                </div>
+
+                <div class="message_box_5">
+                    <p class="m1" data-detect="main_messege_4_1">내 피부가 예뻐지는 소리 <span>UP!</span></p>
+                    <p class="m2" data-detect="main_messege_4_2"></p>
+                </div>
+
+                <div class="message_box_6">
+                    <p class="m1" data-detect="main_messege_5_1">톡톡!</p>
+                    <p class="m2" data-detect="main_messege_5_2">소리를 내며 발생된 co2가</p>
+                    <p class="m3" data-detect="main_messege_5_3">내 피부 속으로!</p>
+                </div>
+
+                <div class="message_box_7">
+                    <p class="m1" data-detect="main_messege_6">단 1회 사용만으로도</p>
+                    <div class="m2">
+                        <ul>
+                            <li data-detect="main_messege_7">안면<br/>리프팅</li>
+                            <li data-detect="main_messege_8">피부<br/>밝기</li>
+                            <li data-detect="main_messege_9">모공<br/>개선</li>
+                        </ul>
+                    </div>
+                    <p class="m3" data-detect="main_messege_10">1) 3.73% 리프팅 개선율, ㈜앨리드, 2010, CARBOXY CO2 GEL MASK PACK
+                        의 피부 밝기, 안면 리프팅, 모공개선 인체적용 시험연구</p>
+                    <p class="m4" data-detect="main_messege_11">2) 1.06% 피부밝기 개선율, ㈜앨리드, 2010, CARBOXY CO2 GEL MASK
+                        PACK의 피부 밝기, 안면 리프팅, 모공개선 인체적용 시험연구</p>
+                    <p class="m5" data-detect="main_messege_12">3) 9.46% 모공 개선율, ㈜앨리드. 2010, CARBOXY CO2 GEL MASK PACK의
+                        피부 밝기, 안면 리프팅, 모공개선 인체적용 시험연구</p>
+                </div>
+
+                <div class="message_box_8">
+                    <p class="m1" data-detect="main_messege_13_1">힐링마스크로</p>
+                    <p class="m2" data-detect="main_messege_13_2">내 피부에 플러스<i class="fas fa-plus"></i></p>
+                    <button type="button"  data-detect="link"><a href="https://smartstore.naver.com/jmbmall/products/5417693787"></a></button>
+                </div>
+
+
+                <div class="message_box_9">
+                    <p class="m1" data-detect="main_messege_14_1">지친 당신의 피부에 산소를 공급하여</p>
+                    <p class="m1" data-detect="main_messege_14_1">맑고 깨끗한 피부로 가꿔줍니다!</p>
+
+
+                    <div class="video_wrap">
+                        <div class="video left">
+
+                            <iframe src="https://www.youtube.com/embed/o22o2qt5luM" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <div class="video right">
+                            <iframe src="https://www.youtube.com/embed/k5EexhVbQfU" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<footer>
+
+    <div class="inner_max">
+        <div class="foot_logo">
+            <img src="images/logo/logo_footer.svg" alt="">
+
+        </div>
+        <div class="foot_info">
+            <div class="address">
+                <p>(주) 제이엠바이오텍 | 주소 : 대구광역시 달서구 중흥로 36(송현동)</p>
+                <p>CEO 장지영 | 사업자등록번호 170111-0490590 | 통신판매업신고번호 2017-대구달서-0039 | 개인정보관리자 : OOO</p>
+                <p>TEL 070-5118-1820 | FAX 02-418-7801 | E-MAIL info@jmbiotech.co.kr / overseas@jmbiotech.co.kr </p>
+                <p>Copyright ⓒ 2020 JMBIOTECH CARBOXY SOUND LIMITED. ALL RIGHTS RESERVED</p>
+            </div>
+            <div class="right">
+                <ul class="sns">
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                </ul>
+
+                <ul class="terms">
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">Q&A</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script src="js/app.js"></script>
+<!--<script src="js/scrollTriggerSet.js"></script>-->
+<script src="js/lang.js"></script>
+<script src="js/bubble.js"></script>
+<script src="js/sidebar.js"></script>
+</body>
+</html>
