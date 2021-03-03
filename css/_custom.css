@@ -520,6 +520,10 @@ header.mobile nav div div ul.sns li{
     padding-top: 0;
 }
 
+header.mobile nav div div ul li a {
+    text-decoration:none;
+}
+
 header.mobile nav div div ul li a i {
     padding: 3rem 1rem 0rem 1rem;
     font-size: 2.5rem;
