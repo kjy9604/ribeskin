@@ -500,6 +500,11 @@ header.mobile nav div.side_bar_color {
     background-color: #a42a9c;
 }
 
+header.mobile nav div div ul li:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+
 header.mobile nav div div ul.auth{
     padding-bottom: 5rem;
     font-size: 1.5rem;
