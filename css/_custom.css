@@ -456,21 +456,6 @@ input[id="mobile_menuIcon"]+label span:nth-child(3){
     bottom: 0;
 }
 
-input[id="mobile_menuIcon"]:checked +label span:nth-child(1){
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
-}
-
-input[id="mobile_menuIcon"]:checked +label span:nth-child(2){
-    opacity: 0;
-}
-
-input[id="mobile_menuIcon"]:checked +label span:nth-child(3){
-    bottom: 50%;
-    transform: translateY(50%) rotate(-45deg);
-}
-
-
 .mobile_nav_logo img {
     height: 4rem;
 }
@@ -479,7 +464,17 @@ header nav i.fa-bars:before {
     color: #ffffff;
 }
 
-
+header.mobile nav.mobile_nav div.mobile_nav_icon button{
+    padding: .3125rem 1rem;
+    background-color: #fff;
+    border: 0;
+    border-radius: 1.5rem;
+    font-family : 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    color: #000;
+    cursor: pointer;
+}
 
 /*
 ***************************************************************
@@ -489,42 +484,101 @@ LEFT SIDE BAR
 
 header.mobile nav.side_bar {
     position: fixed;
-    z-index: 1;
+    left: -1000px;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10rem;
-    padding-left: 5rem;
-    width : 80vw;
-    height: 100vh;
-    left: -1000px;
-    background-color: #a42a9c;
     color: #ffffff;
     transition:all .35s;
 }
 
-header nav div ul.auth{
+header.mobile nav div.side_bar_color {
+    position: relative;
+    z-index:1000;
+    top: 0;
+    width : 80vw;
+    height: 100vh;
+    background-color: #a42a9c;
+}
+
+header.mobile nav div div ul.auth{
     padding-bottom: 5rem;
     font-size: 1.5rem;
 }
 
-header nav div ul.menu{
+header.mobile nav div div ul.menu{
     padding-bottom: 5rem;
     font-size: 2.5rem;
 }
 
-header.mobile nav div ul.sns li{
+header.mobile nav div div ul.sns li{
+    float : left;
     padding-top: 0;
 }
 
-header.mobile nav div ul li a i {
-    padding: 10rem 1rem 0rem 1rem;
+header.mobile nav div div ul li a i {
+    padding: 3rem 1rem 0rem 1rem;
     font-size: 2.5rem;
 }
 
-header nav div div img{
+/*모바일 사이드바 buy버튼 크기 조절*/
+header.mobile nav div div img{
     padding-bottom: 5rem;
     width : 10rem;
     outline: none;
+}
+
+header.mobile nav div.inner_max{
+    padding-top: 5rem;
+    padding-left: 5rem;
+}
+
+header.mobile nav div.mobile_background {
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.5);
+    left: 100px;
+    visibility: hidden;
+    width : 100vh;
+    height : 100vh;
+    top: 0;
+}
+
+/* 사이드바 x 버튼 */
+input[id="mobile_sidebar_x"]{
+    display: none;
+}
+
+input[id="mobile_sidebar_x"]+label{
+    position: relative;
+    z-index: 1000;
+    display: block;
+    padding: 3px;
+    float : left;
+    left: 80vw;
+    top: -92vh;
+    width: 40px;
+    height: 40px;
+    background-color: #111111;
+    cursor: pointer;
+}
+
+input[id="mobile_sidebar_x"]+label span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-radius: 30px;
+    background: #ffffff;
+    transition: all .35s;
+}
+
+input[id="mobile_sidebar_x"]+label span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) translateX(-5%) rotate(45deg);
+}
+
+input[id="mobile_sidebar_x"]+label span:nth-child(2){
+    bottom: 50%;
+    transform: translateY(50%) translateX(-5%) rotate(-45deg);
 }
 
 /*
