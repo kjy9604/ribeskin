@@ -49,15 +49,7 @@ if (!String.prototype.padStart) {
   };
 }
 var device = window.matchMedia('(orientation: portrait)').matches;
-window.addEventListener('resize', function () {
-  device = window.matchMedia('(orientation: portrait)').matches;
-
-  if (window.matchMedia('(orientation: portrait)').matches) {
-    // console.log('세로');
-  } else {
-    // console.log('가로');
-  }
-});
+var scrollHeight =8440;
 
 const html = document.documentElement;
 const canvas = document.getElementById("hero-lightpass");
@@ -88,7 +80,6 @@ const preloadImages = function () {
     const img = new Image();
     img.src = currentFrame(i);
     bg.src = bgFrame(i);
-
   }
 };
 
@@ -99,10 +90,10 @@ img.src = currentFrame(1);
 const bg = new Image();
 bg.src = bgFrame(1);
 
+
 window.addEventListener("resize", resizeCanvas, true);
-
 function resizeCanvas() {
-
+  device = window.matchMedia('(orientation: portrait)').matches;
   // canvas size
   if(!device){
     canvas.width = window.innerWidth;
@@ -117,6 +108,17 @@ function resizeCanvas() {
   bgCanvas.width = window.innerWidth;
   bgCanvas.height = window.innerHeight;
   bgContext.drawImage(bg, 0, 0, window.innerWidth, window.innerHeight);
+
+
+  const scrollTop = html.scrollTop;
+  // const maxScrollTop = html.scrollHeight - window.innerHeight;
+  const maxScrollTop = scrollHeight - window.innerHeight;
+  const scrollFraction = scrollTop / maxScrollTop;
+  const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
+  requestAnimationFrame(function () {
+    updateImage(frameIndex + 1);
+  });
+
 }
 resizeCanvas();
 
@@ -150,7 +152,7 @@ const updateImage = function (index) {
 window.addEventListener("scroll", function () {
   const scrollTop = html.scrollTop;
   // const maxScrollTop = html.scrollHeight - window.innerHeight;
-  const maxScrollTop = 8440 - window.innerHeight;
+  const maxScrollTop = scrollHeight - window.innerHeight;
   const scrollFraction = scrollTop / maxScrollTop;
   const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
   requestAnimationFrame(function () {
@@ -159,9 +161,6 @@ window.addEventListener("scroll", function () {
 });
 
 preloadImages();
-// console.log(window.matchMedia('(orientation: portrait)').matches)
-
-var scrollHeight =8440;
 
 window.addEventListener("scroll", function () {
 
@@ -183,7 +182,6 @@ window.addEventListener("scroll", function () {
     arrow.classList.remove('active')
   }
 
-  console.log(top)
   /*message_box_1*/
   var msg1_Point1 = parseInt(scrollHeight * 8.57142857 / 100 );
   var mag1_Point2 = parseInt(scrollHeight * 10.3333333 / 100);
