@@ -530,6 +530,16 @@ header.mobile nav div div ul li a i {
 }
 
 /*모바일 사이드바 buy버튼 크기 조절*/
+header.mobile nav div.mobile_background {
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    width : 100vw;
+    height : 100vh;
+}
+
 header.mobile nav div div img{
     padding-bottom: 5rem;
     width : 10rem;
@@ -539,16 +549,6 @@ header.mobile nav div div img{
 header.mobile nav div.inner_max{
     padding-top: 5rem;
     padding-left: 5rem;
-}
-
-header.mobile nav div.mobile_background {
-    position: absolute;
-    background-color:rgba(0, 0, 0, 0.5);
-    left: 100px;
-    visibility: hidden;
-    width : 100vh;
-    height : 100vh;
-    top: 0;
 }
 
 /* 사이드바 x 버튼 */
@@ -561,7 +561,6 @@ input[id="mobile_sidebar_x"]+label{
     z-index: 1000;
     display: block;
     padding: 3px;
-    float : left;
     left: 80vw;
     top: -92vh;
     width: 40px;
