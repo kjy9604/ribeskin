@@ -13,6 +13,5 @@ menuBtn.addEventListener("click",function (){
 sidebarXBnt.addEventListener("click",function (){
     sidebar_teg[0].style.left = -1000+'px';
     menuBtnLabal[1].style.visibility="visible";
-    menuBtnLabal[1].style.transition="all .4s ease";
     mobileBackground[0].style.visibility="hidden";
 });
