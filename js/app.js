@@ -346,6 +346,7 @@ window.addEventListener("scroll", function () {
 
 var scrollPos = [0,755,3710,7225]
 var menu = document.querySelector('.menu').children;
+var menu_mobile = document.querySelector('.menu_mobile').children;
 var dot = document.querySelector('.dot').children[0].children;
 
 for(var i=0; i<menu.length; i++){
@@ -363,7 +364,12 @@ for(var i=0; i<menu.length; i++){
       menu[+i].classList.add('active')
       dot[+i].classList.add('active')
     })
-
+    menu_mobile[i].addEventListener("click", function (){
+        dotRemove()
+        window.scrollTo({top: scrollPos[+i], behavior: 'smooth'});
+        menu[+i].classList.add('active')
+        dot[+i].classList.add('active')
+    })
   })(i);
 }
 

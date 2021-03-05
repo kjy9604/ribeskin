@@ -414,9 +414,12 @@ HEADER MOBILE
 */
 
 .mobile_nav {
+    position: absolute;
+    z-index:-5;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100vw;
     background-color: #35275f;
     padding: 8px 12px;
 }
@@ -530,9 +533,10 @@ header.mobile nav div div ul li a i {
     font-size: 2.5rem;
 }
 
-/*모바일 사이드바 buy버튼 크기 조절*/
-header.mobile nav div.mobile_background {
+/*모바일 사이드바*/
+header.mobile div.mobile_background {
     position: absolute;
+    z-index:-1;
     background-color:rgba(0, 0, 0, 0.5);
     left: 0;
     top: 0;
