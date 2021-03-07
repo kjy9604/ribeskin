@@ -84,98 +84,134 @@ ul, ol, li {
 loaded-container
 ***************************************************************
 */
+
+.loaded-container {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    z-index: 9999;
+    transition: all 0.5s;
+    text-align: center;
+}
+
+.loading-box {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loaded-spin {
+    transition: opacity 0.5s;
+    opacity: 1;
+    width: 200px;
+}
+
+.loading-title {
+    width: 200px;
+}
+
+.loaded-container.hide {
+    opacity: 0;
+    z-index: 0;
+}
+.loaded-container.hide .loading-box{
+    z-index: 0;
+}
+
+
+
+/*
+***************************************************************
+bubble
+***************************************************************
+*/
 html, body, #container {width:100%; height:100%; }
 #container{
     position: fixed;
     z-index: 999;
 }
-.roundSmall,
-.roundMedium,
-.roundLarge {
-    background: #fff;
-    border-radius: 50%;
+.round1, .round2, .round3,.round4, .round5, .round6,.round7, .round8, .round9,.round10, .round11, .round12, .round13, .round14{
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background: url("../images/BUBBLE/Bubble svg_3.svg");
+    background-size: 100% 100%;
 }
-.roundMedium {
-    width: 4px;
-    height: 4px;
+.round1{
+    width: 11px;
+    height: 11px;
+    background: url("../images/BUBBLE/Bubble_svg_1.svg");
 }
-.roundLarge {
-    width: 5px;
-    height: 5px;
+.round2{
+    width: 34px;
+    height: 34px;
+    background: url("../images/BUBBLE/Bubble_svg_2.svg");
 }
-.starSmall,
-.starMedium,
-.starLarge {
-    position: absolute;
+.round3 {
+    width: 80px;
+    height: 80px;
+    background: url("../images/BUBBLE/Bubble_svg_3.svg");
+}
+.round4 {
+    width: 34px;
+    height: 34px;
+    background: url("../images/BUBBLE/Bubble_svg_4.svg");
+}
+.round5{
     width: 10px;
     height: 10px;
-    background: url("../images/BUBBLE/Bubble_svg_1.svg");
-    background-size: 100% 100%;
-}
-.starMedium {
-    width: 15px;
-    height: 15px;
-}
-.starLarge {
-    width: 20px;
-    height: 20px;
-}
-.realSmall,
-.realMedium,
-.realLarge {
-    position: absolute;
-    width: 25px;
-    height: 25px;
     background: url("../images/BUBBLE/Bubble_svg_5.svg");
-    background-size: 100% 100%;
 }
-.realMedium {
-    width: 30px;
-    height: 30px;
+.round6{
+    width: 34px;
+    height: 34px;
+    background: url("../images/BUBBLE/Bubble_svg_6.svg");
 }
-.realLarge {
-    width: 40px;
-    height: 40px;
-}
-.sharpSmall,
-.sharpMedium,
-.sharpLarge {
-    position: absolute;
+.round7{
     width: 20px;
     height: 20px;
-    background-size: 100% 100%;
+    background: url("../images/BUBBLE/Bubble_svg_7.svg");
+}
+.round8{
+    width: 35px;
+    height: 35px;
+    background: url("../images/BUBBLE/Bubble_svg_8.svg");
+}
+
+.round9 {
+    width: 42px;
+    height: 42px;
     background: url("../images/BUBBLE/Bubble_svg_9.svg");
-    background-size: 100% 100%;
 }
-.sharpMedium {
-    width: 28px;
-    height: 28px;
+.round10 {
+    width: 18px;
+    height: 18px;
+    background: url("../images/BUBBLE/Bubble_svg_10.svg");
 }
-.sharpLarge {
-    width: 35px;
-    height: 35px;
+.round11 {
+    width: 118px;
+    height: 118px;
+    background: url("../images/BUBBLE/Bubble_svg_11.svg");
 }
-.ringSmall,
-.ringMedium,
-.ringLarge {
-    position: absolute;
-    width: 15px;
-    height: 15px;
+.round12 {
+    width: 42px;
+    height: 42px;
+    background: url("../images/BUBBLE/Bubble_svg_12.svg");
+}
+.round13 {
+    width: 20px;
+    height: 20px;
+    background: url("../images/BUBBLE/Bubble_svg_13.svg");
+}
+.round14 {
+    width: 50px;
+    height: 50px;
     background: url("../images/BUBBLE/Bubble_svg_14.svg");
-    background-size: 100% 100%;
 }
-.ringMedium {
-    width: 25px;
-    height: 25px;
-}
-.ringLarge {
-    width: 35px;
-    height: 35px;
-}
+
 
 /*
 ***************************************************************
@@ -274,6 +310,9 @@ header.pc .top .sns li{
     margin-right: 2.5rem;
     font-size: 1.5rem;
     line-height: 3.1875rem;
+}
+header.pc .top .sns li a{
+    color: #fff;
 }
 header.pc .top .auth{
     float: right;
@@ -374,7 +413,7 @@ header .gnb ul:after{
 .scroll_down{
     opacity: 0;
     position: absolute;
-    top: 75%;
+    top: 85%;
     right: 0%;
     left: 0%;
     z-index: 999;
@@ -681,6 +720,14 @@ body.ko .message_box_1 .m2{
     font-size: 3.125em;
     color: #6F7EE7;
     letter-spacing: 0em;
+}
+body.ko .message_box_1 .m3{
+    width: 6.5rem;
+    height: 5.0625rem;
+    margin-top: 0.75rem;
+    background-image: url("../images/sound_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 body.en .message_box_1 .m1{
@@ -1079,6 +1126,10 @@ body.en .message_box_8 .m2{
     text-align: center;
     transition: all .4s ease;
 }
+.message_box_9 .inner{
+    max-width: 1250px;
+    margin: 0 auto;
+}
 .message_box_9 .video_wrap{
     margin-top: 3.25rem;
 }
@@ -1097,6 +1148,7 @@ body.en .message_box_8 .m2{
     position: relative;
     width: calc(50% - 1rem);
     /*padding-top: 56.25%;*/
+    max-width: 609px;
     padding-top: 28.125%;
 }
 .message_box_9 .video_wrap iframe{

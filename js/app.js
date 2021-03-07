@@ -1,3 +1,4 @@
+/*
 if (!String.prototype.repeat) {
   String.prototype.repeat = function (count) {
     "use strict";
@@ -31,8 +32,10 @@ if (!String.prototype.repeat) {
     return str;
   };
 }
+*/
 // https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+/*
 if (!String.prototype.padStart) {
   String.prototype.padStart = function padStart(targetLength, padString) {
     targetLength = targetLength >> 0; //truncate if number or convert non-number to 0;
@@ -48,6 +51,8 @@ if (!String.prototype.padStart) {
     }
   };
 }
+*/
+
 var device = window.matchMedia('(orientation: portrait)').matches;
 var scrollHeight =8440;
 
@@ -55,8 +60,10 @@ const html = document.documentElement;
 const canvas = document.getElementById("hero-lightpass");
 const context = canvas.getContext("2d");
 
+/*
 const bgCanvas = document.getElementById("bg");
 const bgContext = bgCanvas.getContext("2d");
+*/
 
 
 const frameCount = 588;
@@ -70,16 +77,18 @@ var currentFrame = function currentFrame(index) {
 };
 
 
+/*
 var bgFrame = function bgFrame(index) {
   return "./images/colorchip/colorchip_" + index.toString().padStart(5, "0") + ".jpg";
 };
+*/
 
 
 const preloadImages = function () {
   for (let i = 0; i < frameCount; i++) {
     const img = new Image();
     img.src = currentFrame(i);
-    bg.src = bgFrame(i);
+    // bg.src = bgFrame(i);
   }
 };
 
@@ -87,8 +96,10 @@ const preloadImages = function () {
 const img = new Image();
 img.src = currentFrame(1);
 
+/*
 const bg = new Image();
 bg.src = bgFrame(1);
+*/
 
 
 window.addEventListener("resize", resizeCanvas, true);
@@ -97,17 +108,19 @@ function resizeCanvas() {
   // canvas size
   if(!device){
     canvas.width = window.innerWidth;
-    canvas.height = window.innerWidth*0.5625;
-    context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
-  }else{
-    canvas.width = window.innerHeight*0.5625;
     canvas.height = window.innerHeight;
-    context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
+    context.drawImage(img, 0, 0, window.innerWidth,innerHeight);
+  }else{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    context.drawImage(img, 0, 0, window.innerWidth,window.innerHeight);
   }
 
+/*
   bgCanvas.width = window.innerWidth;
   bgCanvas.height = window.innerHeight;
   bgContext.drawImage(bg, 0, 0, window.innerWidth, window.innerHeight);
+*/
 
 
   const scrollTop = html.scrollTop;
@@ -125,27 +138,29 @@ resizeCanvas();
 
 img.onload = function () {
   if(!device){
-    context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
+    context.drawImage(img, 0, 0, window.innerWidth,window.innerHeight);
   }else{
-    context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
+    context.drawImage(img, 0, 0, window.innerWidth,window.innerHeight);
   }
 
 };
-bg.onload = function () {
+/*bg.onload = function () {
   bgContext.drawImage(bg, 0, 0, window.innerWidth,window.innerHeight);
-};
+};*/
 
 const updateImage = function (index) {
 
   img.src = currentFrame(index);
   if(!device){
-    context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
+    context.drawImage(img, 0, 0, window.innerWidth,window.innerHeight);
   }else {
-    context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
+    context.drawImage(img, 0, 0, window.innerWidth,window.innerHeight);
   }
 
+/*
   bg.src = bgFrame(index);
   bgContext.drawImage(bg, 0, 0, window.innerWidth,window.innerHeight);
+*/
 
 };
 
@@ -162,7 +177,50 @@ window.addEventListener("scroll", function () {
 
 preloadImages();
 
+
+
+var scrollPos = [0,755,3710,7225]
+var menu = document.querySelector('.menu').children;
+var menu_mobile = document.querySelector('.menu_mobile').children;
+var dot = document.querySelector('.dot').children[0].children;
+
+for(var i=0; i<menu.length; i++){
+  (function(i){
+
+    menu[i].addEventListener("click", function (){
+      dotRemove()
+      window.scrollTo({top: scrollPos[+i], behavior: 'smooth'});
+      menu[+i].classList.add('active')
+      dot[+i].classList.add('active')
+    })
+    dot[i].addEventListener("click", function (){
+      dotRemove()
+      window.scrollTo({top: scrollPos[+i], behavior: 'smooth'});
+      menu[+i].classList.add('active')
+      dot[+i].classList.add('active')
+    })
+    menu_mobile[i].addEventListener("click", function (){
+        dotRemove()
+        window.scrollTo({top: scrollPos[+i], behavior: 'smooth'});
+        menu[+i].classList.add('active')
+        dot[+i].classList.add('active')
+    })
+  })(i);
+}
+
+var dotRemove = function (){
+  for(var j = 0 ; j < menu.length; j++){
+    (function(j){
+      menu[+j].classList.remove('active')
+      dot[+j].classList.remove('active')
+    })(j);
+  }
+}
+
+
+
 window.addEventListener("scroll", function () {
+
 
   var top = document.documentElement.scrollTop;
   var arrow = document.querySelector('.scroll_down');
@@ -174,6 +232,32 @@ window.addEventListener("scroll", function () {
   var msg6 = document.querySelector('.message_box_6');
   var msg7 = document.querySelector('.message_box_7');
   var msg8 = document.querySelector('.message_box_8');
+
+
+
+  if(scrollPos[0]-10 < top && scrollPos[1] > top){
+    dotRemove()
+    menu[0].classList.add('active')
+    dot[0].classList.add('active')
+  }
+  if(scrollPos[1]-10 < top && scrollPos[2] > top){
+    dotRemove()
+    menu[1].classList.add('active')
+    dot[1].classList.add('active')
+  }
+  if(scrollPos[2]-10 < top && scrollPos[3] > top){
+    dotRemove()
+    menu[2].classList.add('active')
+    dot[2].classList.add('active')
+  }
+  if(scrollPos[3]-10 < top){
+    dotRemove()
+    menu[3].classList.add('active')
+    dot[3].classList.add('active')
+  }
+
+
+
 
   if(top < 100){
     arrow.classList.add('active')
@@ -340,46 +424,25 @@ window.addEventListener("scroll", function () {
     msg8.style.top = '100%'
   }
 
-
 })
 
+window.onload = function () {
+  console.log(1111)
+  /*
+  var loadContainer = $(".loaded-container");
+  var loadSpinImage = $(".loaded-spin");
 
-var scrollPos = [0,755,3710,7225]
-var menu = document.querySelector('.menu').children;
-var menu_mobile = document.querySelector('.menu_mobile').children;
-var dot = document.querySelector('.dot').children[0].children;
-
-for(var i=0; i<menu.length; i++){
-  (function(i){
-
-    menu[i].addEventListener("click", function (){
-      dotRemove()
-      window.scrollTo({top: scrollPos[+i], behavior: 'smooth'});
-      menu[+i].classList.add('active')
-      dot[+i].classList.add('active')
-    })
-    dot[i].addEventListener("click", function (){
-      dotRemove()
-      window.scrollTo({top: scrollPos[+i], behavior: 'smooth'});
-      menu[+i].classList.add('active')
-      dot[+i].classList.add('active')
-    })
-    menu_mobile[i].addEventListener("click", function (){
-        dotRemove()
-        window.scrollTo({top: scrollPos[+i], behavior: 'smooth'});
-        menu[+i].classList.add('active')
-        dot[+i].classList.add('active')
-    })
-  })(i);
+  loadContainer.addClass("hide");
+  loadSpinImage.addClass("hide");
+*/
+  // bottomAnchorHandler();
+};
+/*
+function bottomAnchorHandler(){
+  const triggerTop = document.querySelector(topAnchor);
+  triggerTop.addEventListener('click', function(){
+    // html의 상든 scrollTop = 0 으로 이동하게
+    window.scrollTo(0,0);
+  })
 }
-
-var dotRemove = function (){
-  for(var j = 0 ; j < menu.length; j++){
-    (function(j){
-      menu[+j].classList.remove('active')
-      dot[+j].classList.remove('active')
-    })(j);
-  }
-}
-
-
+*/
