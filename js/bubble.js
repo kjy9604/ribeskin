@@ -1,15 +1,15 @@
 var w = window.innerWidth , h = window.innerHeight,
     container = document.getElementById("container"),
-    sizes = ["Small", "Medium", "Large"],
-    types = ["round", "star", "real", "sharp", "ring"],
+    sizes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
+    types = ["round"],
     snowflakes = 50;
 
 for (var i = 0; i < snowflakes; i++) {
     var snowflakeDiv = document.createElement('div');
-    var sizeIndex = Math.ceil(Math.random() * 3) -1; //get random number between 0 and 2
+    var sizeIndex = Math.ceil(Math.random() * 14) -1; //get random number between 0 and 2
     var size = sizes[sizeIndex]; //get random size
-    var typeIndex = Math.ceil(Math.random() * 5) -1;
-    var type = types[typeIndex];
+    // var typeIndex = Math.ceil(Math.random() * 5) -1;
+    var type = types[0];
     TweenMax.set(snowflakeDiv, {attr: {class: type + size}, x: R(0,w), y: R(-200,-150) });
     container.appendChild(snowflakeDiv);
     snowing(snowflakeDiv);
