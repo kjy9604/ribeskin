@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6328a89d-ce51-46d0-8817-7044630c827d" name="Default Changelist" comment="">
+    <list default="true" id="6328a89d-ce51-46d0-8817-7044630c827d" name="Default Changelist" comment="side bar back graund animation effect delete">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sidebar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,14 +12,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44932845">
+    <splitter split-orientation="horizontal" split-proportion="0.46934605">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="194">
-                  <caret line="112" column="33" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="33" />
+                <state relative-caret-position="59">
+                  <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
                   <folding>
                     <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
@@ -32,7 +32,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/sidebar.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="240">
@@ -42,9 +42,23 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.gitattributes">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="570">
+                  <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/_custom.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="385">
+                <state relative-caret-position="8160">
                   <caret line="544" column="19" selection-start-line="544" selection-start-column="19" selection-end-line="544" selection-end-column="19" />
                 </state>
               </provider>
@@ -58,7 +72,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
+                <state relative-caret-position="5310">
                   <caret line="354" column="29" selection-start-line="354" selection-start-column="29" selection-end-line="354" selection-end-column="29" />
                 </state>
               </provider>
@@ -126,6 +140,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/_custom.css" />
         <option value="$PROJECT_DIR$/js/sidebar.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -135,11 +150,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="24" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1600" />
     <option name="y" value="25" />
-    <option name="width" value="1656" />
-    <option name="height" value="984" />
+    <option name="width" value="1224" />
+    <option name="height" value="875" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -147,6 +162,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,7 +174,23 @@
             <path>
               <item name="ribeskin" type="b2602c69:ProjectViewProjectNode" />
               <item name="ribeskin" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ribeskin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ribeskin" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ribeskin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ribeskin" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ribeskin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ribeskin" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="logo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ribeskin" type="b2602c69:ProjectViewProjectNode" />
@@ -168,15 +201,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1614925466805" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1615169204534" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="$USER_HOME$/n/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -187,6 +218,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
@@ -322,7 +354,9 @@
       <workItem from="1614759166358" duration="336000" />
       <workItem from="1614773946025" duration="905000" />
       <workItem from="1614776053330" duration="2208000" />
-      <workItem from="1614919088115" duration="4695000" />
+      <workItem from="1614919088115" duration="7427000" />
+      <workItem from="1615090972569" duration="1124000" />
+      <workItem from="1615168982800" duration="346000" />
     </task>
     <task id="LOCAL-00001" summary="re commit">
       <created>1614691285893</created>
@@ -338,17 +372,23 @@
       <option name="project" value="LOCAL" />
       <updated>1614923945116</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="side bar back graund animation effect delete">
+      <created>1614925690532</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614925690532</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45224000" />
+    <option name="totallyTimeSpent" value="49426000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1680" height="984" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1600" y="25" width="1224" height="875" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.103785105" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19881557" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -416,7 +456,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="re commit" />
     <MESSAGE value="mobile scroll , side bar back graund" />
-    <option name="LAST_COMMIT_MESSAGE" value="mobile scroll , side bar back graund" />
+    <MESSAGE value="side bar back graund animation effect delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="side bar back graund animation effect delete" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../customSkinOld/lende.html">
@@ -455,8 +496,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/logo/logo_mobile_white.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/logo/logo_footer.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/logo/logo_main.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/_custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8160">
+          <caret line="544" column="19" selection-start-line="544" selection-start-column="19" selection-end-line="544" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/app_1.js">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5310">
+          <caret line="354" column="29" selection-start-line="354" selection-start-column="29" selection-end-line="354" selection-end-column="29" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -472,35 +554,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="354" column="29" selection-start-line="354" selection-start-column="29" selection-end-line="354" selection-end-column="29" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/_custom.css">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="544" column="19" selection-start-line="544" selection-start-column="19" selection-end-line="544" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="112" column="33" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="33" />
-          <folding>
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        <state relative-caret-position="570">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
