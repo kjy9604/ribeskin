@@ -452,7 +452,7 @@ HEADER MOBILE
 ***************************************************************
 */
 
-.mobile_nav_bar123 {
+.mobile_nav_bar {
     position: absolute;
     z-index:-5;
     display: flex;
@@ -464,11 +464,11 @@ HEADER MOBILE
 }
 
 /* 사이드바 햄버거 버튼 */
-input[id="mobile_menuIcon"]{
+button#mobile_menuIcon {
     display: none;
 }
 
-input[id="mobile_menuIcon"]+label{
+button#mobile_menuIcon +label{
     display: block;
     width: 30px;
     height: 20px;
@@ -476,7 +476,7 @@ input[id="mobile_menuIcon"]+label{
     cursor: pointer;
 }
 
-input[id="mobile_menuIcon"]+label span{
+button#mobile_menuIcon +label span{
     display: block;
     position: absolute;
     width: 100%;
@@ -486,16 +486,16 @@ input[id="mobile_menuIcon"]+label span{
     transition: all .35s;
 }
 
-input[id="mobile_menuIcon"]+label span:nth-child(1){
+button#mobile_menuIcon +label span:nth-child(1){
     top: 0;
 }
 
-input[id="mobile_menuIcon"]+label span:nth-child(2){
+button#mobile_menuIcon+label span:nth-child(2){
     top: 50%;
     transform: translateY(-50%);
 }
 
-input[id="mobile_menuIcon"]+label span:nth-child(3){
+button#mobile_menuIcon+label span:nth-child(3){
     bottom: 0;
 }
 
@@ -507,7 +507,7 @@ header nav i.fa-bars:before {
     color: #ffffff;
 }
 
-header.mobile nav.mobile_nav_bar123 div.mobile_nav_icon button{
+header.mobile nav.mobile_nav_bar div.mobile_nav_icon button{
     padding: .3125rem 1rem;
     background-color: #fff;
     border: 0;
@@ -1459,7 +1459,7 @@ footer .terms li a{
         left: 265px;
     }
 
-    .mobile_nav_bar123 {
+    .mobile_nav_bar {
         width: 480px;
     }
 }
