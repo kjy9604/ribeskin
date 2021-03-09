@@ -452,7 +452,7 @@ HEADER MOBILE
 ***************************************************************
 */
 
-.mobile_nav {
+.mobile_nav_bar {
     position: absolute;
     z-index:-5;
     display: flex;
@@ -460,15 +460,15 @@ HEADER MOBILE
     align-items: center;
     width: 100vw;
     background-color: #35275f;
-    padding: 8px 12px;
+    padding: 8px 12px 8px 12px;
 }
 
 /* 사이드바 햄버거 버튼 */
-input[id="mobile_menuIcon"]{
+button#mobile_menuIcon {
     display: none;
 }
 
-input[id="mobile_menuIcon"]+label{
+button#mobile_menuIcon +label{
     display: block;
     width: 30px;
     height: 20px;
@@ -476,7 +476,7 @@ input[id="mobile_menuIcon"]+label{
     cursor: pointer;
 }
 
-input[id="mobile_menuIcon"]+label span{
+button#mobile_menuIcon +label span{
     display: block;
     position: absolute;
     width: 100%;
@@ -486,16 +486,16 @@ input[id="mobile_menuIcon"]+label span{
     transition: all .35s;
 }
 
-input[id="mobile_menuIcon"]+label span:nth-child(1){
+button#mobile_menuIcon +label span:nth-child(1){
     top: 0;
 }
 
-input[id="mobile_menuIcon"]+label span:nth-child(2){
+button#mobile_menuIcon+label span:nth-child(2){
     top: 50%;
     transform: translateY(-50%);
 }
 
-input[id="mobile_menuIcon"]+label span:nth-child(3){
+button#mobile_menuIcon+label span:nth-child(3){
     bottom: 0;
 }
 
@@ -507,7 +507,7 @@ header nav i.fa-bars:before {
     color: #ffffff;
 }
 
-header.mobile nav.mobile_nav div.mobile_nav_icon button{
+header.mobile nav.mobile_nav_bar div.mobile_nav_icon button{
     padding: .3125rem 1rem;
     background-color: #fff;
     border: 0;
@@ -538,7 +538,7 @@ header.mobile nav div.side_bar_color {
     position: relative;
     z-index:1000;
     top: 0;
-    width : 80vw;
+    width : 350px;
     height: 100vh;
     background-color: #a42a9c;
 }
@@ -558,21 +558,27 @@ header.mobile nav div div ul.menu{
     font-size: 2.5rem;
 }
 
-header.mobile nav div div ul.sns li{
-    float : left;
-    padding-top: 0;
+header.mobile nav div div.mobile_sns{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+}
+
+header.mobile nav div div ul.sns{
+    display: flex;
 }
 
 header.mobile nav div div ul li a {
+    padding-right: 5rem;
+    justify-content:space-between;
     text-decoration:none;
 }
 
-header.mobile nav div div ul li a i {
-    padding: 3rem 1rem 0rem 1rem;
+header.mobile nav div div ul.sns li a i {
     font-size: 2.5rem;
 }
 
-/*모바일 사이드바*/
+/*모바일 사이드바 백그라운드*/
 header.mobile div.mobile_background {
     position: absolute;
     z-index:-1;
@@ -605,7 +611,7 @@ input[id="mobile_sidebar_x"]+label{
     z-index: 1000;
     display: block;
     padding: 3px;
-    left: 80vw;
+    left: 350px;
     top: -92vh;
     width: 40px;
     height: 40px;
@@ -1458,6 +1464,19 @@ footer .terms li a{
     footer .sns{
         flex: 1 1 0%;
         justify-content: flex-start;
+    }
+
+    /* 모바일 사이드바 최소길이 설정*/
+    header.mobile nav div.side_bar_color {
+        width : 265px;
+    }
+
+    input[id="mobile_sidebar_x"]+label{
+        left: 265px;
+    }
+
+    .mobile_nav_bar {
+        width: 480px;
     }
 }
 
