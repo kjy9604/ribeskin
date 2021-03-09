@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/css/_custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/_custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bubble.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bubble.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +142,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -252,7 +262,8 @@
       <workItem from="1614773946025" duration="905000" />
       <workItem from="1614776053330" duration="2208000" />
       <workItem from="1614919088115" duration="4695000" />
-      <workItem from="1615120884929" duration="3298000" />
+      <workItem from="1615120884929" duration="3551000" />
+      <workItem from="1615293541822" duration="4399000" />
     </task>
     <task id="LOCAL-00001" summary="re commit">
       <created>1614691285893</created>
@@ -268,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614923945116</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="클라이언트에서 요청한 리스트 반영.">
+      <created>1615131176696</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615131176696</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -358,7 +376,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="re commit" />
     <MESSAGE value="mobile scroll , side bar back graund" />
-    <option name="LAST_COMMIT_MESSAGE" value="mobile scroll , side bar back graund" />
+    <MESSAGE value="클라이언트에서 요청한 리스트 반영." />
+    <option name="LAST_COMMIT_MESSAGE" value="클라이언트에서 요청한 리스트 반영." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../customSkinOld/lende.html">
