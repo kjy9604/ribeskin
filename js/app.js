@@ -108,9 +108,16 @@ function resizeCanvas() {
 
   // canvas size
   if(!device){
+/*
+    canvas.width = window.window.innerHeight*1.77777777778;
+    canvas.height = window.innerHeight;
+    context.drawImage(img, 0, 0, window.window.innerHeight*1.77777777778,window.innerHeight);
+*/
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerWidth*0.5625;
     context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
+
   }else{
     canvas.width = window.innerHeight*0.5625;
     canvas.height = window.innerHeight;
@@ -138,7 +145,7 @@ resizeCanvas();
 
 img.onload = function () {
   if(!device){
-    context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
+    // context.drawImage(img, 0, 0, window.window.innerHeight*1.77777777778,window.innerHeight);
     context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
   }else{
     context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
@@ -153,6 +160,7 @@ const updateImage = function (index) {
 
   img.src = currentFrame(index);
   if(!device){
+    // context.drawImage(img, 0, 0, window.window.innerHeight*1.77777777778,window.innerHeight);
     context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
   }else {
     context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
