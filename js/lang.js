@@ -13,20 +13,20 @@ var multiLanguage = {
       en : "<a href=\"https://overseas30.wixsite.com/co2sound\"></a>"
     },
     login: {
-        ko: "LOGIN",
-        en: "LOGIN"
+        ko: "<a href=\"http://shop6.ribeskin.cafe24.com/member/login.html\">LOGIN</a>",
+        en: "<a href=\"http://shop3.ribeskin.cafe24.com/member/login.html\">LOGIN</a>"
     },
     signup: {
-        ko: "SIGNUP",
-        en: "SIGNUP"
+        ko: "<a href=\"http://shop6.ribeskin.cafe24.com/member/agreement.html\">SIGNUP</a>",
+        en: "<a href=\"http://shop3.ribeskin.cafe24.com/member/agreement.html\">SIGNUP</a>"
     },
     my_account: {
-        ko: "MY ACCOUNT",
-        en: "MY ACCOUNT"
+        ko: "<a href=\"http://shop6.ribeskin.cafe24.com/myshop/index.html\">MY ACCOUNT</a>",
+        en: "<a href=\"http://shop3.ribeskin.cafe24.com/myshop/index.html\">MY ACCOUNT</a>"
     },
     cart: {
-        ko: "CART",
-        en: "CART"
+        ko: "<a href=\"http://shop6.ribeskin.cafe24.com/order/basket.html\">CART</a>",
+        en: "<a href=\"http://shop3.ribeskin.cafe24.com/order/basket.html\">CART</a>"
     },
     /*
     메인 상단
