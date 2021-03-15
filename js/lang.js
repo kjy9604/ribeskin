@@ -3,8 +3,10 @@ var multiLanguage = {
     상단바
     */
     lang : {
-      ko : "<button id=\"enBtn\" data-lang=\"en\">En</button>",
-      en : " <button id=\"koBtn\" data-lang=\"ko\">Ko</button>"
+      ko : "<button id=\"enBtn\" data-lang=\"en\"><a href=\"http://shop3.ribeskin.cafe24.com\">En</a></button>",
+      en : "<button id=\"koBtn\" data-lang=\"ko\"><a href=\"http://shop6.ribeskin.cafe24.com\">En</a></button>"
+      // ko : "<button id=\"enBtn\" data-lang=\"en\">En</button>",
+      // en : " <button id=\"koBtn\" data-lang=\"ko\">Ko</button>"
     },
     link : {
       ko : "<a href=\"https://smartstore.naver.com/jmbmall/products/5417693787\"></a>",

@@ -32,6 +32,7 @@ html, body {
     font-weight: normal;
 }
 
+
 a:hover,
 a:visited,
 a:focus {
@@ -333,11 +334,23 @@ header.pc .top .auth button{
     background-color: #fff;
     border: 0;
     border-radius: 1rem;
+    /*font-family : 'Montserrat', sans-serif;*/  /*영문페이지 리다이렉트 문제로 a태그 추가하면서 스타일 틀어진거 바꿈*/
+    /*font-weight: 900;*/
+    /*font-size: .75rem;*/
+    /*color: #000;*/
+    cursor: pointer;
+}
+header.pc .top .auth button a{
+    text-decoration: none;
+    /*padding: .3125rem 1rem;*/
+    /*background-color: #fff;*/
+    /*border: 0;*/
+    /*border-radius: 1rem;*/
     font-family : 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: .75rem;
     color: #000;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 header.pc .gnb{
     /*height: 4.9375rem;*/
@@ -513,11 +526,17 @@ header.mobile nav.mobile_nav_bar div.mobile_nav_icon button{
     background-color: #fff;
     border: 0;
     border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+
+header.mobile nav.mobile_nav_bar div.mobile_nav_icon button a{
+    text-decoration: none;
+    padding: 0;
     font-family : 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 1rem;
     color: #000;
-    cursor: pointer;
 }
 
 /*
