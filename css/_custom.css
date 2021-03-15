@@ -26,7 +26,7 @@ html, body {
     height: 100%;
     box-sizing: border-box;
     margin: 0;
-    background: #efc5dd;
+    /*background: #efc5dd;*/
     font-size: 12px;
     font-family : 'Montserrat', sans-serif;
     font-weight: normal;
@@ -407,6 +407,7 @@ header .gnb ul:after{
 
 .inner_max{
     max-width: 1920px;
+    min-width: 800px;
 }
 
 
@@ -1198,6 +1199,7 @@ FOOTER
 ***************************************************************
 */
 
+
 footer{
     position: relative;
     z-index: 999;
@@ -1208,6 +1210,21 @@ footer{
 footer .inner_max{
     max-width: 1920px;
     margin: 0 auto;
+}
+.scroll_top{
+    position: fixed;
+    right: 2.1875rem;
+    bottom: 2.1875rem;
+    /*bottom : 17.3125rem;*/
+    width: 4.0625rem;
+    height: 4.0625rem;
+    background-image: url("../images/scroll_top.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor:pointer;
+}
+.scroll_top.hidden{
+    display: none;
 }
 footer .foot_logo{
     height: 4.8125rem;

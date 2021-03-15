@@ -60,10 +60,9 @@ const html = document.documentElement;
 const canvas = document.getElementById("hero-lightpass");
 const context = canvas.getContext("2d");
 
-/*
+
 const bgCanvas = document.getElementById("bg");
 const bgContext = bgCanvas.getContext("2d");
-*/
 
 
 const frameCount = 588;
@@ -77,18 +76,16 @@ var currentFrame = function currentFrame(index) {
 };
 
 
-/*
 var bgFrame = function bgFrame(index) {
   return "./images/colorchip/colorchip_" + index.toString().padStart(5, "0") + ".jpg";
 };
-*/
 
 
 const preloadImages = function () {
   for (let i = 0; i < frameCount; i++) {
     const img = new Image();
     img.src = currentFrame(i);
-    // bg.src = bgFrame(i);
+    bg.src = bgFrame(i);
   }
 };
 
@@ -96,31 +93,39 @@ const preloadImages = function () {
 const img = new Image();
 img.src = currentFrame(1);
 
-/*
 const bg = new Image();
 bg.src = bgFrame(1);
-*/
+
 
 
 window.addEventListener("resize", resizeCanvas, true);
 function resizeCanvas() {
   device = window.matchMedia('(orientation: portrait)').matches;
-  // canvas size
-  if(!device){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    context.drawImage(img, 0, 0, window.innerWidth,innerHeight);
-  }else{
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    context.drawImage(img, 0, 0, window.innerWidth,window.innerHeight);
-  }
 
-/*
   bgCanvas.width = window.innerWidth;
   bgCanvas.height = window.innerHeight;
   bgContext.drawImage(bg, 0, 0, window.innerWidth, window.innerHeight);
+
+  // canvas size
+  if(!device){
+/*
+    canvas.width = window.window.innerHeight*1.77777777778;
+    canvas.height = window.innerHeight;
+    context.drawImage(img, 0, 0, window.window.innerHeight*1.77777777778,window.innerHeight);
 */
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerWidth*0.5625;
+    context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
+
+  }else{
+    canvas.width = window.innerHeight*0.5625;
+    canvas.height = window.innerHeight;
+    context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
+  }
+
+
+
 
 
   const scrollTop = html.scrollTop;
@@ -132,35 +137,39 @@ function resizeCanvas() {
     updateImage(frameIndex + 1);
   });
 
+
+
 }
 resizeCanvas();
 
 
 img.onload = function () {
   if(!device){
-    context.drawImage(img, 0, 0, window.innerWidth,window.innerHeight);
+    // context.drawImage(img, 0, 0, window.window.innerHeight*1.77777777778,window.innerHeight);
+    context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
   }else{
-    context.drawImage(img, 0, 0, window.innerWidth,window.innerHeight);
+    context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
   }
 
 };
-/*bg.onload = function () {
+bg.onload = function () {
   bgContext.drawImage(bg, 0, 0, window.innerWidth,window.innerHeight);
-};*/
+};
 
 const updateImage = function (index) {
 
   img.src = currentFrame(index);
   if(!device){
-    context.drawImage(img, 0, 0, window.innerWidth,window.innerHeight);
+    // context.drawImage(img, 0, 0, window.window.innerHeight*1.77777777778,window.innerHeight);
+    context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
   }else {
-    context.drawImage(img, 0, 0, window.innerWidth,window.innerHeight);
+    context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
   }
 
-/*
+
   bg.src = bgFrame(index);
   bgContext.drawImage(bg, 0, 0, window.innerWidth,window.innerHeight);
-*/
+
 
 };
 
@@ -217,6 +226,9 @@ var dotRemove = function (){
   }
 }
 
+document.querySelector('.scroll_top').addEventListener('click',function(){
+  window.scrollTo({top: 0, behavior: 'smooth'});
+})
 
 
 window.addEventListener("scroll", function () {
@@ -224,6 +236,7 @@ window.addEventListener("scroll", function () {
 
   var top = document.documentElement.scrollTop;
   var arrow = document.querySelector('.scroll_down');
+  var arrowTop = document.querySelector('.scroll_top');
   var msg1 = document.querySelector('.message_box_1');
   var msg2 = document.querySelector('.message_box_2');
   var msg3 = document.querySelector('.message_box_3');
@@ -261,9 +274,12 @@ window.addEventListener("scroll", function () {
 
   if(top < 100){
     arrow.classList.add('active')
+    arrowTop.classList.add('hidden')
   }
   if(top > 100){
     arrow.classList.remove('active')
+    arrowTop.classList.remove('hidden')
+    // arrowTop.style.top = window.innerHeight +top+'px';
   }
 
   /*message_box_1*/
@@ -425,24 +441,3 @@ window.addEventListener("scroll", function () {
   }
 
 })
-
-window.onload = function () {
-  console.log(1111)
-  /*
-  var loadContainer = $(".loaded-container");
-  var loadSpinImage = $(".loaded-spin");
-
-  loadContainer.addClass("hide");
-  loadSpinImage.addClass("hide");
-*/
-  // bottomAnchorHandler();
-};
-/*
-function bottomAnchorHandler(){
-  const triggerTop = document.querySelector(topAnchor);
-  triggerTop.addEventListener('click', function(){
-    // html의 상든 scrollTop = 0 으로 이동하게
-    window.scrollTo(0,0);
-  })
-}
-*/
