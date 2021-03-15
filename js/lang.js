@@ -4,7 +4,7 @@ var multiLanguage = {
     */
     lang : {
       ko : "<button id=\"enBtn\" data-lang=\"en\"><a href=\"http://shop3.ribeskin.cafe24.com\">En</a></button>",
-      en : "<button id=\"koBtn\" data-lang=\"ko\"><a href=\"http://shop6.ribeskin.cafe24.com\">En</a></button>"
+      en : "<button id=\"koBtn\" data-lang=\"ko\"><a href=\"http://shop6.ribeskin.cafe24.com\">Ko</a></button>"
       // ko : "<button id=\"enBtn\" data-lang=\"en\">En</button>",
       // en : " <button id=\"koBtn\" data-lang=\"ko\">Ko</button>"
     },
@@ -215,7 +215,7 @@ window.onload = () => {
     };
 
     //영문으로 실행하기 위해서 필요.
-    setLanguage('en');
+    setLanguage('ko');
 
     langBtn.addEventListener("click",function (){
         setLanguage(langBtn.dataset.lang);
