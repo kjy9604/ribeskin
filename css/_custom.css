@@ -747,14 +747,6 @@ body.ko .message_box_1 .m2{
     color: #6F7EE7;
     letter-spacing: 0em;
 }
-body.ko .message_box_1 .m3{
-    width: 6.5rem;
-    height: 5.0625rem;
-    margin-top: 0.75rem;
-    background-image: url("../images/sound_icon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
 
 body.en .message_box_1 .m1{
     font-family: 'Montserrat', sans-serif;
@@ -772,6 +764,14 @@ body.en .message_box_1 .m2{
     font-size: 3.75em;
     color: #6F7EE7;
     letter-spacing: 0em;
+}
+.message_box_1 .m3{
+    width: 6.5rem;
+    height: 5.0625rem;
+    margin-top: 0.75rem;
+    background-image: url("../images/sound_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 
