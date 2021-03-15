@@ -215,7 +215,7 @@ window.onload = () => {
     };
 
     //영문으로 실행하기 위해서 필요.
-    setLanguage('en');
+    setLanguage('ko');
 
     langBtn.addEventListener("click",function (){
         setLanguage(langBtn.dataset.lang);
