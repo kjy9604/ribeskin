@@ -473,7 +473,7 @@ HEADER MOBILE
     align-items: center;
     width: 100vw;
     background-color: #35275f;
-    padding: 8px 30px 8px 30px;
+    padding: 8px 10px 8px 16px;
 }
 
 /* 사이드바 햄버거 버튼 */
@@ -1495,7 +1495,7 @@ footer .terms li a{
     }
 
     .mobile_nav_bar {
-        width: 480px;
+        width: 100%;
     }
 }
 
