@@ -3,8 +3,8 @@ var multiLanguage = {
     상단바
     */
     lang : {
-      ko : "<button id=\"enBtn\" data-lang=\"en\"><a href=\"http://shop3.ribeskin.cafe24.com\">En</a></button>",
-      en : "<button id=\"koBtn\" data-lang=\"ko\"><a href=\"http://shop6.ribeskin.cafe24.com\">Ko</a></button>"
+      ko : "<button id=\"enBtn\" data-lang=\"en\"><a href=\"http://en.co2sound.com\">En</a></button>",
+      en : "<button id=\"koBtn\" data-lang=\"ko\"><a href=\"http://co2sound.com\">Ko</a></button>"
       // ko : "<button id=\"enBtn\" data-lang=\"en\">En</button>",
       // en : " <button id=\"koBtn\" data-lang=\"ko\">Ko</button>"
     },
@@ -13,24 +13,29 @@ var multiLanguage = {
       en : "<a href=\"https://overseas30.wixsite.com/co2sound\"></a>"
     },
     login: {
-        ko: "<a href=\"http://shop6.ribeskin.cafe24.com/member/login.html\">LOGIN</a>",
-        en: "<a href=\"http://shop3.ribeskin.cafe24.com/member/login.html\">LOGIN</a>"
+        ko: "<a href=\"http://co2sound.com/member/login.html\">LOGIN</a>",
+        en: "<a href=\"http://en.co2sound.com/member/login.html\">LOGIN</a>"
     },
     signup: {
-        ko: "<a href=\"http://shop6.ribeskin.cafe24.com/member/agreement.html\">SIGNUP</a>",
-        en: "<a href=\"http://shop3.ribeskin.cafe24.com/member/agreement.html\">SIGNUP</a>"
+        ko: "<a href=\"http://co2sound.com/member/agreement.html\">SIGNUP</a>",
+        en: "<a href=\"http://en.co2sound.com/member/agreement.html\">SIGNUP</a>"
     },
     my_account: {
-        ko: "<a href=\"http://shop6.ribeskin.cafe24.com/myshop/index.html\">MY ACCOUNT</a>",
-        en: "<a href=\"http://shop3.ribeskin.cafe24.com/myshop/index.html\">MY ACCOUNT</a>"
+        ko: "<a href=\"http://co2sound.com/myshop/index.html\">MY ACCOUNT</a>",
+        en: "<a href=\"http://en.co2sound.com/myshop/index.html\">MY ACCOUNT</a>"
     },
     cart: {
-        ko: "<a href=\"http://shop6.ribeskin.cafe24.com/order/basket.html\">CART</a>",
-        en: "<a href=\"http://shop3.ribeskin.cafe24.com/order/basket.html\">CART</a>"
+        ko: "<a href=\"http://co2sound.com/order/basket.html\">CART</a>",
+        en: "<a href=\"http://en.co2sound.com/order/basket.html\">CART</a>"
     },
     /*
     메인 상단
     */
+
+    main_logo: {
+        ko: "<a href=\"http://co2sound.com/\"><img src=\"images/logo/main.png\" alt=\"mainLogo\" class=\"bottom-logo-image\"></a>",
+        en: "<a href=\"http://en.co2sound.com/\"><img src=\"images/logo/main.png\" alt=\"mainLogo\" class=\"bottom-logo-image\"></a>"
+    },
 
     main: {
         ko: "메인",
@@ -215,7 +220,7 @@ window.onload = () => {
     };
 
     //영문으로 실행하기 위해서 필요.
-    setLanguage('en');
+    setLanguage('ko');
 
     langBtn.addEventListener("click",function (){
         setLanguage(langBtn.dataset.lang);
