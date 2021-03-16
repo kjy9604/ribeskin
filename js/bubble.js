@@ -2,7 +2,7 @@ var w = window.innerWidth , h = window.innerHeight,
     container = document.getElementById("container"),
     sizes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
     types = ["round"],
-    snowflakes = 50;
+    snowflakes = 10;
 
 for (var i = 0; i < snowflakes; i++) {
     var snowflakeDiv = document.createElement('div');
