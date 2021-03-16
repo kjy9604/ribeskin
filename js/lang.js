@@ -9,8 +9,16 @@ var multiLanguage = {
       // en : " <button id=\"koBtn\" data-lang=\"ko\">Ko</button>"
     },
     link : {
-      ko : "<a href=\"https://smartstore.naver.com/jmbmall/products/5417693787\"></a>",
-      en : "<a href=\"https://overseas30.wixsite.com/co2sound\"></a>"
+      // ko : "<a href=\"https://smartstore.naver.com/jmbmall/products/5417693787\"></a>",
+      // en : "<a href=\"https://overseas30.wixsite.com/co2sound\"></a>"
+      ko : "<a href=\"https://co2sound.com/product/co2-carboxy-sound/264/category/173/display/1/\"></a>",
+      en : "<a href=\"http://en.co2sound.com/product/co2-carboxy-sound/263/category/173/display/1/\"></a>"
+    },
+    mobaile_link : {
+        // ko : "<a href=\"https://smartstore.naver.com/jmbmall/products/5417693787\"></a>",
+        // en : "<a href=\"https://overseas30.wixsite.com/co2sound\"></a>"
+        ko : "<a href=\"https://co2sound.com/product/co2-carboxy-sound/264/category/173/display/1/\"><img src=\"images/icon/icon_buy_white.png\" /></a>",
+        en : "<a href=\"http://en.co2sound.com/product/co2-carboxy-sound/263/category/173/display/1/\"><img src=\"images/icon/icon_buy_white.png\" /></a>"
     },
     login: {
         ko: "<a href=\"http://co2sound.com/member/login.html\">LOGIN</a>",
@@ -220,7 +228,7 @@ window.onload = () => {
     };
 
     //영문으로 실행하기 위해서 필요.
-    setLanguage('ko');
+    setLanguage('en');
 
     langBtn.addEventListener("click",function (){
         setLanguage(langBtn.dataset.lang);
