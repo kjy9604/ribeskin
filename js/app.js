@@ -233,7 +233,6 @@ document.querySelector('.scroll_top').addEventListener('click',function(){
 
 window.addEventListener("scroll", function () {
 
-
   var top = document.documentElement.scrollTop;
   var arrow = document.querySelector('.scroll_down');
   var arrowTop = document.querySelector('.scroll_top');
@@ -245,7 +244,6 @@ window.addEventListener("scroll", function () {
   var msg6 = document.querySelector('.message_box_6');
   var msg7 = document.querySelector('.message_box_7');
   var msg8 = document.querySelector('.message_box_8');
-
 
 
   if(scrollPos[0]-10 < top && scrollPos[1] > top){
@@ -270,7 +268,12 @@ window.addEventListener("scroll", function () {
   }
 
 
-
+  if(top < 7745){
+    arrowTop.style.top = (top + window.innerHeight - 120)+'px';
+  }
+  if(top > 7745){
+    arrowTop.style.top = 8472+'px';
+  }
 
   if(top < 100){
     arrow.classList.add('active')
@@ -278,6 +281,7 @@ window.addEventListener("scroll", function () {
   }
   if(top > 100){
     arrow.classList.remove('active')
+
     arrowTop.classList.remove('hidden')
     // arrowTop.style.top = window.innerHeight +top+'px';
   }

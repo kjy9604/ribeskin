@@ -1230,9 +1230,9 @@ footer .inner_max{
     margin: 0 auto;
 }
 .scroll_top{
-    position: fixed;
+    position: absolute;
     right: 2.1875rem;
-    bottom: 2.1875rem;
+    /*bottom: 2.1875rem;*/
     /*bottom : 17.3125rem;*/
     z-index: 9999;
     width: 4.0625rem;
