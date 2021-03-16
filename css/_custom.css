@@ -50,7 +50,7 @@ ul, ol, li {
     overflow: hidden;
     position: fixed;
     top: 4.5625rem; right: 1.75rem;
-    z-index: 99999;
+    z-index: 99998;
     background-color: #A32B9E;
     border-radius: 50%;
     border: none;
@@ -94,7 +94,7 @@ loaded-container
     width: 100vw;
     height: 100vh;
     background: #fff;
-    z-index: 9999;
+    z-index: 99999;
     transition: all 0.5s;
     text-align: center;
 }
@@ -110,7 +110,7 @@ loaded-container
 .loaded-spin {
     transition: opacity 0.5s;
     opacity: 1;
-    width: 200px;
+    width: 90px;
 }
 
 .loading-title {
@@ -1234,6 +1234,7 @@ footer .inner_max{
     right: 2.1875rem;
     bottom: 2.1875rem;
     /*bottom : 17.3125rem;*/
+    z-index: 9999;
     width: 4.0625rem;
     height: 4.0625rem;
     background-image: url("../images/scroll_top.png");
