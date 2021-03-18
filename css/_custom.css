@@ -114,7 +114,9 @@ loaded-container
 }
 
 .loading-title {
-    width: 200px;
+    width: 60px;
+    height: 13px;
+    font-size: 12px;
 }
 
 .loaded-container.hide {
@@ -1148,6 +1150,7 @@ body.en .message_box_8 .m2{
     top: 8100px;
     left: 4%;
     right: 4%;
+    z-index: 999;
     text-align: center;
     transition: all .4s ease;
 }
@@ -1307,7 +1310,7 @@ footer .terms li a{
     }
     header .top,
     header .gnb{
-        padding: 0;
+        /*padding: 0;*/
     }}
 
 /* PC 가로 (해상도 1280px ~ 1919px)*/
