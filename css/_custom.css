@@ -538,6 +538,43 @@ header.mobile nav.mobile_nav_bar div.mobile_nav_icon button a{
     color: #000;
 }
 
+header.mobile button.go_to {
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    top: 7rem; right: 1.75rem;
+    z-index: 99998;
+    background-color: #A32B9E;
+    border-radius: 50%;
+    border: none;
+    text-align: center;
+    width: 6rem;
+    height: 6rem;
+}
+header.mobile button.go_to a{
+    display: block;
+    width: 6rem;
+    height: 7rem;
+    border-radius: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 6.5625rem;
+    text-decoration: none;
+}
+header.mobile button.go_to a:after{
+    content: "BUY";
+}
+header.mobile button.go_to:hover{
+    background-color: transparent;;
+    background-image: url("../images/icon_buy_btn_visible.svg");
+    background-size: contain;
+}
+header.mobile button.go_to:hover a:after{
+    content: '';
+}
+
 /*
 ***************************************************************
 LEFT SIDE BAR
