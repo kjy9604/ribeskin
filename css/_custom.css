@@ -1479,8 +1479,12 @@ footer .terms li a{
         font-size: 3rem;
     }
     /*모바일 폰트 조절*/
-    body.en .message_box_7 .m1.mobile{
-        font-size: 2.5rem;
+    body .message_box_7 .m1.mobile{
+        font-size: 2.6rem;
+    }
+
+    .message_box_7 .m2.mobile ul li{
+        font-size: 1.4rem;
     }
 
     .message_box_7 .m2 ul{

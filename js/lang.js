@@ -118,15 +118,15 @@ var multiLanguage = {
         en: "WITH JUST A SINGLE USE"
     },
     main_messege_7: {
-        ko: "안면리프팅",
+        ko: "안면<br>리프팅",
         en: "<p>SKIN</p><p>ELASTICITY</p>"
     },
     main_messege_8: {
-        ko: "피부밝기",
+        ko: "피부<br>밝기",
         en: "<p>SKIN</p><p>TONE UP</p>"
     },
     main_messege_9: {
-        ko: "모공개선",
+        ko: "모공<br>개선",
         en: "<p>PORE</p><p>CONTROL</p>"
     },
     main_messege_10: {
@@ -232,7 +232,7 @@ window.onload = () => {
     };
 
     //영문으로 실행하기 위해서 필요.
-    setLanguage('en');
+    setLanguage('ko');
 
     langBtn.addEventListener("click",function (){
         setLanguage(langBtn.dataset.lang);
