@@ -1517,6 +1517,11 @@ footer .terms li a{
         float: initial;
     }
 
+    /*모바일 폰트 조절*/
+    body.en .message_box_9 .m1.mobile{
+        font-size: 1.5rem;
+    }
+
     footer .foot_info{
         flex-direction: column;
     }
