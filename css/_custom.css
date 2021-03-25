@@ -1402,7 +1402,17 @@ footer .terms li a{
         margin-bottom: 0;
     }
     body.ko .message_box_1 .m1{
+        font-size: 2.5rem;
+    }
+    /*모바일 폰트조절*/
+    body.ko .message_box_1.mobile .m1{
         font-size: 1.8rem;
+    }
+    body.ko .message_box_1.mobile .m2{
+        font-size: 2.25rem;
+    }
+    body.ko .message_box_1.mobile .m3{
+        height: 32px;
     }
 
     .message_box_2{
@@ -1423,9 +1433,6 @@ footer .terms li a{
         font-size: 1.2rem;
     }
 
-    .message_box_4{
-        text-align: center;
-    }
     body.ko .message_box_4 .m1,
     body.ko .message_box_4 .m2,
     body.ko .message_box_4 .m2 span{
