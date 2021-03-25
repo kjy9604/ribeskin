@@ -1469,7 +1469,6 @@ footer .terms li a{
         font-size: 1.3rem;
     }
 
-
     .message_box_7{
         text-align: center;
     }
@@ -1479,6 +1478,11 @@ footer .terms li a{
     body.en .message_box_7 .m1{
         font-size: 3rem;
     }
+    /*모바일 폰트 조절*/
+    body.en .message_box_7 .m1.mobile{
+        font-size: 2.5rem;
+    }
+
     .message_box_7 .m2 ul{
         margin: 0 auto;
     }
