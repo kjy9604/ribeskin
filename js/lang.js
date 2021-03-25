@@ -240,15 +240,15 @@ window.onload = () => {
         if(langBtn.dataset.lang === "ko"){
             document.body.className = document.body.className.replace("en","ko");
             langBtn.dataset.lang = "en";
-            langBtn.innerText = "En"
+            // langBtn.innerText = "En"
             langBtnMobile.dataset.lang = "en";
-            langBtnMobile.innerText = "En"
+            // langBtnMobile.innerText = "En"
         }else if(langBtn.dataset.lang === "en"){
             document.body.className = document.body.className.replace("ko","en");
             langBtn.dataset.lang = "ko"
-            langBtn.innerText = "Ko"
+            // langBtn.innerText = "Ko"
             langBtnMobile.dataset.lang = "ko"
-            langBtnMobile.innerText = "Ko"
+            // langBtnMobile.innerText = "Ko"
         }
 
     });
