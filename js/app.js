@@ -226,16 +226,10 @@ var dotRemove = function (){
   }
 }
 
-document.querySelector('.scroll_top').addEventListener('click',function(){
-  window.scrollTo({top: 0, behavior: 'smooth'});
-})
-
-
 window.addEventListener("scroll", function () {
 
   var top = document.documentElement.scrollTop;
   var arrow = document.querySelector('.scroll_down');
-  var arrowTop = document.querySelector('.scroll_top');
   var msg1 = document.querySelector('.message_box_1');
   var msg2 = document.querySelector('.message_box_2');
   var msg3 = document.querySelector('.message_box_3');
@@ -265,25 +259,6 @@ window.addEventListener("scroll", function () {
     dotRemove()
     menu[3].classList.add('active')
     dot[3].classList.add('active')
-  }
-
-
-  if(top < 7745){
-    arrowTop.style.top = (top + window.innerHeight - 120)+'px';
-  }
-  if(top > 7745){
-    arrowTop.style.top = 8472+'px';
-  }
-
-  if(top < 100){
-    arrow.classList.add('active')
-    arrowTop.classList.add('hidden')
-  }
-  if(top > 100){
-    arrow.classList.remove('active')
-
-    arrowTop.classList.remove('hidden')
-    // arrowTop.style.top = window.innerHeight +top+'px';
   }
 
   /*message_box_1*/
