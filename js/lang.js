@@ -69,9 +69,13 @@ var multiLanguage = {
         ko: "SCROLL DOWN",
         en: "SCROLL DOWN"
     },
-    main_messege_1: {
+    main_messege_1_1: {
         ko: "내 피부가 숨쉬는 소리를 들어보세요!",
         en: "SOUND UP YOUR SKIN BREATHE!"
+    },
+    main_messege_1_2: {
+        ko: "Sound up your skin breathe!",
+        en: ""
     },
     main_messege_2_1: {
         ko: "집에서 즐기는 <span>셀프 에스테틱!</span>",
