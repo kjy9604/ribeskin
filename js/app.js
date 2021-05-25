@@ -262,8 +262,8 @@ window.addEventListener("scroll", function () {
   }
 
   /*message_box_1*/
-  var msg1_Point1 = parseInt(scrollHeight * 8.57142857 / 100 );
-  var mag1_Point2 = parseInt(scrollHeight * 10.3333333 / 100);
+  var msg1_Point1 = parseInt(scrollHeight * 6.57142857 / 100 );
+  var mag1_Point2 = parseInt(scrollHeight * 14.3333333 / 100);
   if(top <  msg1_Point1){
     msg1.classList.remove('active')
     msg1.style.top = '100%'
@@ -291,7 +291,7 @@ window.addEventListener("scroll", function () {
   }
 
   /*message_box_3*/
-  var msg3_Point1 = parseInt(scrollHeight * 24.54832234 / 100 );
+  var msg3_Point1 = parseInt(scrollHeight * 22.54832234 / 100 );
   var mag3_Point2 = parseInt(scrollHeight * 30.513335245 / 100);
   if(top < msg3_Point1){
     msg3.classList.remove('active')
@@ -309,7 +309,7 @@ window.addEventListener("scroll", function () {
   }
 
   /*message_box_4*/
-  var msg4_Point1 = parseInt(scrollHeight * 32.793232 / 100 );
+  var msg4_Point1 = parseInt(scrollHeight * 30.793232 / 100 );
   var mag4_Point2 = parseInt(scrollHeight * 37.94092342 / 100);
   if(top < msg4_Point1) {
     msg4.classList.remove('active')
@@ -385,7 +385,7 @@ window.addEventListener("scroll", function () {
 
   /*message_box_7*/
   var msg7_Point1 = parseInt(scrollHeight * 67.3931746 / 100 );
-  var mag7_Point2 = parseInt(scrollHeight * 73.86 / 100);
+  var mag7_Point2 = parseInt(scrollHeight * 75.86 / 100);
   if(top < msg7_Point1){
     msg7.classList.remove('active')
     msg7.style.top = '100%'
@@ -402,7 +402,7 @@ window.addEventListener("scroll", function () {
   }
 
   /*message_box_8*/
-  var msg8_Point1 = parseInt(scrollHeight * 84.123222 / 100 );
+  var msg8_Point1 = parseInt(scrollHeight * 78.123222 / 100 );
   var mag8_Point2 = parseInt(scrollHeight * 88.862559 / 100);
   if(top < msg8_Point1){
     msg8.classList.remove('active')
