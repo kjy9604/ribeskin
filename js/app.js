@@ -65,7 +65,7 @@ const bgCanvas = document.getElementById("bg");
 const bgContext = bgCanvas.getContext("2d");
 
 
-const frameCount = 588;
+const frameCount = 1338;
 
 var currentFrame = function currentFrame(index) {
   if(!device){
