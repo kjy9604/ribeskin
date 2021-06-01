@@ -54,7 +54,7 @@ if (!String.prototype.padStart) {
 */
 
 var device = window.matchMedia('(orientation: portrait)').matches;
-var scrollHeight =8440;
+var scrollHeight = 19605;
 
 const html = document.documentElement;
 const canvas = document.getElementById("hero-lightpass");
@@ -65,7 +65,7 @@ const bgCanvas = document.getElementById("bg");
 const bgContext = bgCanvas.getContext("2d");
 
 
-const frameCount = 1338;
+const frameCount = 1340;
 
 var currentFrame = function currentFrame(index) {
   if(!device){
@@ -353,9 +353,9 @@ window.addEventListener("scroll", function () {
   }
 
   /*message_box_6*/
-  var msg6_Point1 = parseInt(scrollHeight * 51.996271 / 100 );
-  var mag6_Point2 = parseInt(scrollHeight * 56.738743 / 100);
-  var mag6_Point3 = parseInt(scrollHeight * 62.610266 / 100);
+  var msg6_Point1 = parseInt(scrollHeight * 52.996271 / 100 );
+  var mag6_Point2 = parseInt(scrollHeight * 57.738743 / 100);
+  var mag6_Point3 = parseInt(scrollHeight * 63.610266 / 100);
   if(top < msg6_Point1) {
     msg6.classList.remove('active')
     msg6.style.top = '100%'
@@ -384,8 +384,8 @@ window.addEventListener("scroll", function () {
 
 
   /*message_box_7*/
-  var msg7_Point1 = parseInt(scrollHeight * 62.3931746 / 100 );
-  var mag7_Point2 = parseInt(scrollHeight * 74.86 / 100);
+  var msg7_Point1 = parseInt(scrollHeight * 64.3931746 / 100 );
+  var mag7_Point2 = parseInt(scrollHeight * 77.86 / 100);
   if(top < msg7_Point1){
     msg7.classList.remove('active')
     msg7.style.top = '100%'
@@ -402,8 +402,8 @@ window.addEventListener("scroll", function () {
   }
 
   /*message_box_8*/
-  var msg8_Point1 = parseInt(scrollHeight * 74.123222 / 100 );
-  var mag8_Point2 = parseInt(scrollHeight * 86.862559 / 100);
+  var msg8_Point1 = parseInt(scrollHeight * 79.123222 / 100 );
+  var mag8_Point2 = parseInt(scrollHeight * 90.862559 / 100);
   if(top < msg8_Point1){
     msg8.classList.remove('active')
     msg8.style.top = '-10%'
