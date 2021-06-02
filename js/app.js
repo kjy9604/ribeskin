@@ -53,6 +53,8 @@ if (!String.prototype.padStart) {
 }
 */
 
+
+
 var device = window.matchMedia('(orientation: portrait)').matches;
 var scrollHeight = 19605;
 
@@ -90,11 +92,21 @@ const preloadImages = function () {
 };
 
 
-const img = new Image();
-img.src = currentFrame(1);
+// const img = new Image();
+// img.src = currentFrame(1);
 
-const bg = new Image();
-bg.src = bgFrame(1);
+// const bg = new Image();
+// bg.src = bgFrame(1);
+
+const img = new Array();
+const bg = new Array();
+
+for(let i = 0; i < frameCount; i++) {
+  img[i] = new Image();
+  img[i].src = currentFrame(i);
+  bg[i] = new Image();
+  bg[i].src = bgFrame(i);
+}
 
 
 
@@ -104,8 +116,15 @@ function resizeCanvas() {
 
   bgCanvas.width = window.innerWidth;
   bgCanvas.height = window.innerHeight;
-  bgContext.drawImage(bg, 0, 0, window.innerWidth, window.innerHeight);
 
+  
+  const scrollTop = html.scrollTop;
+  // const maxScrollTop = html.scrollHeight - window.innerHeight;
+  const maxScrollTop = scrollHeight - window.innerHeight;
+  const scrollFraction = scrollTop / maxScrollTop;
+  const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
+
+  bgContext.drawImage(bg[frameIndex], 0, 0, window.innerWidth, window.innerHeight);
   // canvas size
   if(!device){
 /*
@@ -116,23 +135,18 @@ function resizeCanvas() {
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerWidth*0.5625;
-    context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
+    context.drawImage(img[frameIndex], 0, 0, window.innerWidth,window.innerWidth*0.5625);
 
   }else{
     canvas.width = window.innerHeight*0.5625;
     canvas.height = window.innerHeight;
-    context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
+    context.drawImage(img[frameIndex], 0, 0, window.innerHeight*0.5625,window.innerHeight);
   }
 
 
 
 
 
-  const scrollTop = html.scrollTop;
-  // const maxScrollTop = html.scrollHeight - window.innerHeight;
-  const maxScrollTop = scrollHeight - window.innerHeight;
-  const scrollFraction = scrollTop / maxScrollTop;
-  const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
   requestAnimationFrame(function () {
     updateImage(frameIndex + 1);
   });
@@ -143,17 +157,31 @@ function resizeCanvas() {
 resizeCanvas();
 
 
-img.onload = function () {
+img[0].onload = function () {
+
+  const scrollTop = html.scrollTop;
+  // const maxScrollTop = html.scrollHeight - window.innerHeight;
+  const maxScrollTop = scrollHeight - window.innerHeight;
+  const scrollFraction = scrollTop / maxScrollTop;
+  const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
+
   if(!device){
     // context.drawImage(img, 0, 0, window.window.innerHeight*1.77777777778,window.innerHeight);
-    context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
+    context.drawImage(img[frameIndex], 0, 0, window.innerWidth,window.innerWidth*0.5625);
   }else{
-    context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
+    context.drawImage(img[frameIndex], 0, 0, window.innerHeight*0.5625,window.innerHeight);
   }
 
 };
-bg.onload = function () {
-  bgContext.drawImage(bg, 0, 0, window.innerWidth,window.innerHeight);
+bg[0].onload = function () {
+
+  const scrollTop = html.scrollTop;
+  // const maxScrollTop = html.scrollHeight - window.innerHeight;
+  const maxScrollTop = scrollHeight - window.innerHeight;
+  const scrollFraction = scrollTop / maxScrollTop;
+  const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
+
+  bgContext.drawImage(bg[frameIndex], 0, 0, window.innerWidth,window.innerHeight);
 };
 
 const updateImage = function (index) {
@@ -161,14 +189,14 @@ const updateImage = function (index) {
   img.src = currentFrame(index);
   if(!device){
     // context.drawImage(img, 0, 0, window.window.innerHeight*1.77777777778,window.innerHeight);
-    context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
+    context.drawImage(img[index], 0, 0, window.innerWidth,window.innerWidth*0.5625);
   }else {
-    context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
+    context.drawImage(img[index], 0, 0, window.innerHeight*0.5625,window.innerHeight);
   }
 
 
   bg.src = bgFrame(index);
-  bgContext.drawImage(bg, 0, 0, window.innerWidth,window.innerHeight);
+  bgContext.drawImage(bg[index], 0, 0, window.innerWidth,window.innerHeight);
 
 
 };
