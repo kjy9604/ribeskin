@@ -710,8 +710,7 @@ section.move {
     right: 0%;
     left: 0%;
     z-index: 1;
-    height: 19605px;
-    /* height: 8690px; */
+    height: 8690px;
     /*height: 1000vh;*/
 }
 
@@ -1186,8 +1185,7 @@ body.en .message_box_8 .m2{
 
 .message_box_9 {
     position: absolute;
-    top: 19015px;
-    /* top: 8100px; */
+    top: 8100px;
     left: 4%;
     right: 4%;
     z-index: 999;

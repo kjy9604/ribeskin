@@ -53,10 +53,8 @@ if (!String.prototype.padStart) {
 }
 */
 
-
-
 var device = window.matchMedia('(orientation: portrait)').matches;
-var scrollHeight = 19605;
+var scrollHeight =8440;
 
 const html = document.documentElement;
 const canvas = document.getElementById("hero-lightpass");
@@ -67,7 +65,7 @@ const bgCanvas = document.getElementById("bg");
 const bgContext = bgCanvas.getContext("2d");
 
 
-const frameCount = 1337;
+const frameCount = 588;
 
 var currentFrame = function currentFrame(index) {
   if(!device){
@@ -92,21 +90,11 @@ const preloadImages = function () {
 };
 
 
-// const img = new Image();
-// img.src = currentFrame(1);
+const img = new Image();
+img.src = currentFrame(1);
 
-// const bg = new Image();
-// bg.src = bgFrame(1);
-
-const img = new Array();
-const bg = new Array();
-
-for(let i = 0; i < frameCount; i++) {
-  img[i] = new Image();
-  img[i].src = currentFrame(i);
-  bg[i] = new Image();
-  bg[i].src = bgFrame(i);
-}
+const bg = new Image();
+bg.src = bgFrame(1);
 
 
 
@@ -116,15 +104,8 @@ function resizeCanvas() {
 
   bgCanvas.width = window.innerWidth;
   bgCanvas.height = window.innerHeight;
+  bgContext.drawImage(bg, 0, 0, window.innerWidth, window.innerHeight);
 
-  
-  const scrollTop = html.scrollTop;
-  // const maxScrollTop = html.scrollHeight - window.innerHeight;
-  const maxScrollTop = scrollHeight - window.innerHeight;
-  const scrollFraction = scrollTop / maxScrollTop;
-  const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
-
-  bgContext.drawImage(bg[frameIndex], 0, 0, window.innerWidth, window.innerHeight);
   // canvas size
   if(!device){
 /*
@@ -135,18 +116,23 @@ function resizeCanvas() {
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerWidth*0.5625;
-    context.drawImage(img[frameIndex], 0, 0, window.innerWidth,window.innerWidth*0.5625);
+    context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
 
   }else{
     canvas.width = window.innerHeight*0.5625;
     canvas.height = window.innerHeight;
-    context.drawImage(img[frameIndex], 0, 0, window.innerHeight*0.5625,window.innerHeight);
+    context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
   }
 
 
 
 
 
+  const scrollTop = html.scrollTop;
+  // const maxScrollTop = html.scrollHeight - window.innerHeight;
+  const maxScrollTop = scrollHeight - window.innerHeight;
+  const scrollFraction = scrollTop / maxScrollTop;
+  const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
   requestAnimationFrame(function () {
     updateImage(frameIndex + 1);
   });
@@ -157,31 +143,17 @@ function resizeCanvas() {
 resizeCanvas();
 
 
-img[0].onload = function () {
-
-  const scrollTop = html.scrollTop;
-  // const maxScrollTop = html.scrollHeight - window.innerHeight;
-  const maxScrollTop = scrollHeight - window.innerHeight;
-  const scrollFraction = scrollTop / maxScrollTop;
-  const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
-
+img.onload = function () {
   if(!device){
     // context.drawImage(img, 0, 0, window.window.innerHeight*1.77777777778,window.innerHeight);
-    context.drawImage(img[frameIndex], 0, 0, window.innerWidth,window.innerWidth*0.5625);
+    context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
   }else{
-    context.drawImage(img[frameIndex], 0, 0, window.innerHeight*0.5625,window.innerHeight);
+    context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
   }
 
 };
-bg[0].onload = function () {
-
-  const scrollTop = html.scrollTop;
-  // const maxScrollTop = html.scrollHeight - window.innerHeight;
-  const maxScrollTop = scrollHeight - window.innerHeight;
-  const scrollFraction = scrollTop / maxScrollTop;
-  const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
-
-  bgContext.drawImage(bg[frameIndex], 0, 0, window.innerWidth,window.innerHeight);
+bg.onload = function () {
+  bgContext.drawImage(bg, 0, 0, window.innerWidth,window.innerHeight);
 };
 
 const updateImage = function (index) {
@@ -189,14 +161,14 @@ const updateImage = function (index) {
   img.src = currentFrame(index);
   if(!device){
     // context.drawImage(img, 0, 0, window.window.innerHeight*1.77777777778,window.innerHeight);
-    context.drawImage(img[index], 0, 0, window.innerWidth,window.innerWidth*0.5625);
+    context.drawImage(img, 0, 0, window.innerWidth,window.innerWidth*0.5625);
   }else {
-    context.drawImage(img[index], 0, 0, window.innerHeight*0.5625,window.innerHeight);
+    context.drawImage(img, 0, 0, window.innerHeight*0.5625,window.innerHeight);
   }
 
 
   bg.src = bgFrame(index);
-  bgContext.drawImage(bg[index], 0, 0, window.innerWidth,window.innerHeight);
+  bgContext.drawImage(bg, 0, 0, window.innerWidth,window.innerHeight);
 
 
 };
@@ -290,8 +262,8 @@ window.addEventListener("scroll", function () {
   }
 
   /*message_box_1*/
-  var msg1_Point1 = parseInt(scrollHeight * 3.57142857 / 100 );
-  var mag1_Point2 = parseInt(scrollHeight * 14.3333333 / 100);
+  var msg1_Point1 = parseInt(scrollHeight * 8.57142857 / 100 );
+  var mag1_Point2 = parseInt(scrollHeight * 10.3333333 / 100);
   if(top <  msg1_Point1){
     msg1.classList.remove('active')
     msg1.style.top = '100%'
@@ -304,7 +276,7 @@ window.addEventListener("scroll", function () {
   }
   if(top > mag1_Point2) {
     msg1.classList.remove('active')
-    msg1.style.top = '-10%'
+    msg1.style.top = '-100%'
   }
 
 
@@ -319,11 +291,11 @@ window.addEventListener("scroll", function () {
   }
 
   /*message_box_3*/
-  var msg3_Point1 = parseInt(scrollHeight * 17.54832234 / 100 );
-  var mag3_Point2 = parseInt(scrollHeight * 28.513335245 / 100);
+  var msg3_Point1 = parseInt(scrollHeight * 24.54832234 / 100 );
+  var mag3_Point2 = parseInt(scrollHeight * 30.513335245 / 100);
   if(top < msg3_Point1){
     msg3.classList.remove('active')
-    msg3.style.top = '0%'
+    msg3.style.top = '-100%'
   }
   if(top > msg3_Point1) {
     msg3.classList.add('active')
@@ -337,8 +309,8 @@ window.addEventListener("scroll", function () {
   }
 
   /*message_box_4*/
-  var msg4_Point1 = parseInt(scrollHeight * 28.793232 / 100 );
-  var mag4_Point2 = parseInt(scrollHeight * 39.94092342 / 100);
+  var msg4_Point1 = parseInt(scrollHeight * 32.793232 / 100 );
+  var mag4_Point2 = parseInt(scrollHeight * 37.94092342 / 100);
   if(top < msg4_Point1) {
     msg4.classList.remove('active')
     msg4.style.top = '100%'
@@ -352,18 +324,18 @@ window.addEventListener("scroll", function () {
   }
   if(top > mag4_Point2) {
     msg4.classList.remove('active')
-    msg4.style.top = '-10%'
+    msg4.style.top = '-100%'
   }
 
 
   /*message_box_5*/
-  var msg5_Point1 = parseInt(scrollHeight * 39.94092342 / 100 );
-  var mag5_Point2 = parseInt(scrollHeight * 44.36851161 / 100);
-  var mag5_Point3 = parseInt(scrollHeight * 50.3547462 / 100);
+  var msg5_Point1 = parseInt(scrollHeight * 37.94092342 / 100 );
+  var mag5_Point2 = parseInt(scrollHeight * 45.36851161 / 100);
+  var mag5_Point3 = parseInt(scrollHeight * 49.3547462 / 100);
   if(top < msg5_Point1) {
     msg5.classList.remove('active')
     msg5.style.top = '60%'
-    msg5.style.left = '-30%'
+    msg5.style.left = '-100%'
   }
   if(top > msg5_Point1) {
     msg5.classList.add('active')
@@ -377,13 +349,13 @@ window.addEventListener("scroll", function () {
   }
   if(top > mag5_Point3) {
     msg5.classList.remove('active')
-    msg5.style.top = '-10%'
+    msg5.style.top = '-100%'
   }
 
   /*message_box_6*/
-  var msg6_Point1 = parseInt(scrollHeight * 52.996271 / 100 );
-  var mag6_Point2 = parseInt(scrollHeight * 57.738743 / 100);
-  var mag6_Point3 = parseInt(scrollHeight * 63.610266 / 100);
+  var msg6_Point1 = parseInt(scrollHeight * 48.996271 / 100 );
+  var mag6_Point2 = parseInt(scrollHeight * 52.738743 / 100);
+  var mag6_Point3 = parseInt(scrollHeight * 56.610266 / 100);
   if(top < msg6_Point1) {
     msg6.classList.remove('active')
     msg6.style.top = '100%'
@@ -412,8 +384,8 @@ window.addEventListener("scroll", function () {
 
 
   /*message_box_7*/
-  var msg7_Point1 = parseInt(scrollHeight * 64.3931746 / 100 );
-  var mag7_Point2 = parseInt(scrollHeight * 77.86 / 100);
+  var msg7_Point1 = parseInt(scrollHeight * 67.3931746 / 100 );
+  var mag7_Point2 = parseInt(scrollHeight * 73.86 / 100);
   if(top < msg7_Point1){
     msg7.classList.remove('active')
     msg7.style.top = '100%'
@@ -426,15 +398,15 @@ window.addEventListener("scroll", function () {
   }
   if(top > mag7_Point2) {
     msg7.classList.remove('active')
-    msg7.style.top = '-10%'
+    msg7.style.top = '-100%'
   }
 
   /*message_box_8*/
-  var msg8_Point1 = parseInt(scrollHeight * 79.123222 / 100 );
-  var mag8_Point2 = parseInt(scrollHeight * 90.862559 / 100);
+  var msg8_Point1 = parseInt(scrollHeight * 84.123222 / 100 );
+  var mag8_Point2 = parseInt(scrollHeight * 88.862559 / 100);
   if(top < msg8_Point1){
     msg8.classList.remove('active')
-    msg8.style.top = '-10%'
+    msg8.style.top = '-100%'
   }
   if(top > msg8_Point1) {
     msg8.classList.add('active')
