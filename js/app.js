@@ -67,7 +67,7 @@ const bgCanvas = document.getElementById("bg");
 const bgContext = bgCanvas.getContext("2d");
 
 
-const frameCount = 1337;
+const frameCount = 1360;
 
 var currentFrame = function currentFrame(index) {
   if(!device){
@@ -125,6 +125,13 @@ function resizeCanvas() {
   const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
 
   bgContext.drawImage(bg[frameIndex], 0, 0, window.innerWidth, window.innerHeight);
+
+  window.scrollTo(0, 0);
+
+  for(let i = 0; i < frameCount; i++) {
+    img[i].src = currentFrame(i);
+  }
+  
   // canvas size
   if(!device){
 /*
