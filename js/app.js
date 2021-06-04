@@ -293,8 +293,8 @@ window.addEventListener("scroll", function (e) {
   }
 
   /*message_box_1*/
-  var msg1_Point1 = parseInt(scrollHeight * 8.57142857 / 100 );
-  var mag1_Point2 = parseInt(scrollHeight * 10.3333333 / 100);
+  var msg1_Point1 = parseInt(scrollHeight * 7.57142857 / 100 );
+  var mag1_Point2 = parseInt(scrollHeight * 12.3333333 / 100);
   if(top <  msg1_Point1){
     msg1.classList.remove('active')
     msg1.style.top = '100%'
