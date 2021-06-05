@@ -252,12 +252,6 @@ window.addEventListener("wheel", function(e){
 });
 
 window.addEventListener("scroll", function (e) {
-
-  if(e.wheelDelta <= 0) {
-    window.scrollBy(0, 30);
-  } else if(e.wheelDelta >= 0) {
-    window.scrollBy(0, 30);
-  }
   
   var top = document.documentElement.scrollTop;
   var arrow = document.querySelector('.scroll_down');
