@@ -188,7 +188,8 @@ preloadImages();
 
 
 
-var scrollPos = [0,755,3710,7425]
+var scrollPos = [0,755,3710,7800]
+// 2560 x 1440 = 7465, 1920 x 1080 = 7800
 var menu = document.querySelector('.menu').children;
 var menu_mobile = document.querySelector('.menu_mobile').children;
 var dot = document.querySelector('.dot').children[0].children;
