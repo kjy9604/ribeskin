@@ -17,6 +17,10 @@ font-weight : 300; //Medium
 font-weight : 700 ; //Bold
 */
 
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     margin : 0;
     padding: 0;
@@ -93,8 +97,8 @@ loaded-container
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #fff;
-    z-index: 99999;
+    background: #efc5dd;
+    z-index: 99997;
     transition: all 0.5s;
     text-align: center;
 }

@@ -69,7 +69,7 @@ const frameCount = 588;
 
 var currentFrame = function currentFrame(index) {
   if(!device){
-    return "./images/trigger_images_v2/v3_" + index.toString().padStart(5, "0") + ".png";
+    return "./images/trigger_images_v2/v3_" + index.toString().padStart(5, "0") + ".jpg";
   }else{
     return "./images/mobile/mobile_" + index.toString().padStart(5, "0") + ".jpg";
   }
@@ -188,7 +188,8 @@ preloadImages();
 
 
 
-var scrollPos = [0,755,3710,7225]
+var scrollPos = [0,755,3710,7800]
+// 2560 x 1440 = 7465, 1920 x 1080 = 7800
 var menu = document.querySelector('.menu').children;
 var menu_mobile = document.querySelector('.menu_mobile').children;
 var dot = document.querySelector('.dot').children[0].children;
@@ -226,31 +227,6 @@ var dotRemove = function (){
   }
 }
 
-/*
-휠로 인한 스크롤 이벤트을 막고,
-스크롤 이벤트리스너에 휠로 인한 움직임 값이 있을 때
-일정한 픽셀만 이동하게 함
-*/
-
-window.addEventListener("wheel", function(e){
-  e.preventDefault();
-  if(e.wheelDelta <= 0) {
-    window.scrollBy({
-      top: 70,
-      left: 0,
-      behavior: 'smooth'
-    });
-  } else if(e.wheelDelta >= 0) {
-    window.scrollBy({
-      top: -70,
-      left: 0,
-      behavior: 'smooth'
-    });
-  }
-}, {
-  passive: false
-});
-
 window.addEventListener("scroll", function (e) {
   
   var top = document.documentElement.scrollTop;
@@ -287,8 +263,14 @@ window.addEventListener("scroll", function (e) {
   }
 
   /*message_box_1*/
-  var msg1_Point1 = parseInt(scrollHeight * 7.57142857 / 100 );
-  var mag1_Point2 = parseInt(scrollHeight * 12.3333333 / 100);
+
+  var msg1_Point1 = parseInt(scrollHeight * 6.57142857 / 100 );
+  if(!device) {
+    var mag1_Point2 = parseInt(scrollHeight * 14.3333333 / 100);
+  } else {
+    var mag1_Point2 = parseInt(scrollHeight * 19.3333333 / 100);
+  }
+
   if(top <  msg1_Point1){
     msg1.classList.remove('active')
     msg1.style.top = '100%'
@@ -297,7 +279,12 @@ window.addEventListener("scroll", function (e) {
     msg1.classList.add('active')
   }
   if(top > msg1_Point1 && top < mag1_Point2){
-    msg1.style.top =  (100 -  Math.abs((top-msg1_Point1) / (mag1_Point2 - msg1_Point1)) * 100) + '%';
+    if(!device) {
+      msg1.style.top =  (100 -  Math.abs((top-msg1_Point1) / (mag1_Point2 - msg1_Point1)) * 100) + '%';
+    } else {
+      msg1.style.top =  (100 -  Math.abs((top-msg1_Point1) / (mag1_Point2 - msg1_Point1)) * 80) + '%';
+    }
+    msg1.style.scrollBehavior = 'smooth';
   }
   if(top > mag1_Point2) {
     msg1.classList.remove('active')
@@ -316,8 +303,14 @@ window.addEventListener("scroll", function (e) {
   }
 
   /*message_box_3*/
-  var msg3_Point1 = parseInt(scrollHeight * 24.54832234 / 100 );
-  var mag3_Point2 = parseInt(scrollHeight * 30.513335245 / 100);
+  if(!device) {
+    // PC(원본)
+    var msg3_Point1 = parseInt(scrollHeight * 24.54832234 / 100 );
+    var mag3_Point2 = parseInt(scrollHeight * 30.513335245 / 100);
+  } else {
+    var msg3_Point1 = parseInt(scrollHeight * 20.54832234 / 100 );
+    var mag3_Point2 = parseInt(scrollHeight * 29.513335245 / 100);
+  }
   if(top < msg3_Point1){
     msg3.classList.remove('active')
     msg3.style.top = '-100%'
@@ -326,7 +319,11 @@ window.addEventListener("scroll", function (e) {
     msg3.classList.add('active')
   }
   if(top > msg3_Point1 && top < mag3_Point2){
-    msg3.style.top =  (Math.abs((top-msg3_Point1) / (mag3_Point2 - msg3_Point1)) * 100) + '%';
+    if(!device) {
+      msg3.style.top =  (Math.abs((top-msg3_Point1) / (mag3_Point2 - msg3_Point1)) * 100) + '%';
+    } else {
+      msg3.style.top =  (Math.abs((top-msg3_Point1) / (mag3_Point2 - msg3_Point1)) * 80) + '%';
+    }
   }
   if(top > mag3_Point2) {
     msg3.classList.remove('active')
@@ -334,8 +331,12 @@ window.addEventListener("scroll", function (e) {
   }
 
   /*message_box_4*/
-  var msg4_Point1 = parseInt(scrollHeight * 32.793232 / 100 );
-  var mag4_Point2 = parseInt(scrollHeight * 37.94092342 / 100);
+  var msg4_Point1 = parseInt(scrollHeight * 30.793232 / 100 );
+  if(!device) {
+    var mag4_Point2 = parseInt(scrollHeight * 36.94092342 / 100);
+  } else {
+    var mag4_Point2 = parseInt(scrollHeight * 40.94092342 / 100);
+  }
   if(top < msg4_Point1) {
     msg4.classList.remove('active')
     msg4.style.top = '100%'
@@ -345,7 +346,11 @@ window.addEventListener("scroll", function (e) {
     // msg4.style.top = '100%'
   }
   if(top > msg4_Point1 && top < mag4_Point2){
-    msg4.style.top =  (100 -  Math.abs((top-msg4_Point1) / (mag4_Point2 - msg4_Point1)) * 100) + '%';
+    if(!device) {
+      msg4.style.top =  (100 -  Math.abs((top-msg4_Point1) / (mag4_Point2 - msg4_Point1)) * 100) + '%';
+    } else {
+      msg4.style.top =  (100 -  Math.abs((top-msg4_Point1) / (mag4_Point2 - msg4_Point1)) * 80) + '%';
+    }
   }
   if(top > mag4_Point2) {
     msg4.classList.remove('active')
@@ -354,9 +359,15 @@ window.addEventListener("scroll", function (e) {
 
 
   /*message_box_5*/
-  var msg5_Point1 = parseInt(scrollHeight * 37.94092342 / 100 );
-  var mag5_Point2 = parseInt(scrollHeight * 45.36851161 / 100);
-  var mag5_Point3 = parseInt(scrollHeight * 49.3547462 / 100);
+  if(!device) {
+    var msg5_Point1 = parseInt(scrollHeight * 37.94092342 / 100 );
+    var mag5_Point2 = parseInt(scrollHeight * 45.36851161 / 100);
+    var mag5_Point3 = parseInt(scrollHeight * 48.3547462 / 100);
+  } else {
+    var msg5_Point1 = parseInt(scrollHeight * 41.94092342 / 100 );
+    var mag5_Point2 = parseInt(scrollHeight * 47.36851161 / 100);
+    var mag5_Point3 = parseInt(scrollHeight * 52.3547462 / 100);
+  }
   if(top < msg5_Point1) {
     msg5.classList.remove('active')
     msg5.style.top = '60%'
@@ -369,8 +380,13 @@ window.addEventListener("scroll", function (e) {
     msg5.style.left = '4%'
   }
   if(top > mag5_Point2 && top < mag5_Point3) {
-    var aa = 100 - Math.abs((top-msg5_Point1) / (mag5_Point3 - msg5_Point1)) * 100 ;
-    if(aa < 60) msg5.style.top =  aa + '%';
+    if(!device) {
+      var aa = 100 - Math.abs((top-msg5_Point1) / (mag5_Point3 - msg5_Point1)) * 80 ;
+      if(aa < 60) msg5.style.top =  aa + '%';
+    } else {
+      var aa = 100 - Math.abs((top-msg5_Point1) / (mag5_Point3 - msg5_Point1)) * 100 ;
+      if(aa < 60) msg5.style.top =  aa + '%';
+    }
   }
   if(top > mag5_Point3) {
     msg5.classList.remove('active')
@@ -378,9 +394,15 @@ window.addEventListener("scroll", function (e) {
   }
 
   /*message_box_6*/
-  var msg6_Point1 = parseInt(scrollHeight * 48.996271 / 100 );
-  var mag6_Point2 = parseInt(scrollHeight * 52.738743 / 100);
-  var mag6_Point3 = parseInt(scrollHeight * 56.610266 / 100);
+  if(!device) {
+    var msg6_Point1 = parseInt(scrollHeight * 48.996271 / 100 );
+    var mag6_Point2 = parseInt(scrollHeight * 52.738743 / 100);
+    var mag6_Point3 = parseInt(scrollHeight * 56.610266 / 100);
+  } else {
+    var msg6_Point1 = parseInt(scrollHeight * 52.996271 / 100 );
+    var mag6_Point2 = parseInt(scrollHeight * 56.738743 / 100);
+    var mag6_Point3 = parseInt(scrollHeight * 61.610266 / 100);
+  }
   if(top < msg6_Point1) {
     msg6.classList.remove('active')
     msg6.style.top = '100%'
@@ -410,7 +432,11 @@ window.addEventListener("scroll", function (e) {
 
   /*message_box_7*/
   var msg7_Point1 = parseInt(scrollHeight * 67.3931746 / 100 );
-  var mag7_Point2 = parseInt(scrollHeight * 73.86 / 100);
+  if(!device) {
+    var mag7_Point2 = parseInt(scrollHeight * 73.86 / 100);
+  } else {
+    var mag7_Point2 = parseInt(scrollHeight * 78.86 / 100);
+  }
   if(top < msg7_Point1){
     msg7.classList.remove('active')
     msg7.style.top = '100%'
@@ -427,7 +453,7 @@ window.addEventListener("scroll", function (e) {
   }
 
   /*message_box_8*/
-  var msg8_Point1 = parseInt(scrollHeight * 84.123222 / 100 );
+  var msg8_Point1 = parseInt(scrollHeight * 79.123222 / 100 );
   var mag8_Point2 = parseInt(scrollHeight * 88.862559 / 100);
   if(top < msg8_Point1){
     msg8.classList.remove('active')
