@@ -226,8 +226,33 @@ var dotRemove = function (){
   }
 }
 
-window.addEventListener("scroll", function () {
+/*
+휠로 인한 스크롤 이벤트을 막고,
+스크롤 이벤트리스너에 휠로 인한 움직임 값이 있을 때
+일정한 픽셀만 이동하게 함
+*/
 
+window.addEventListener("wheel", function(e){
+  e.preventDefault();
+  if(e.wheelDelta <= 0) {
+    window.scrollBy({
+      top: 70,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else if(e.wheelDelta >= 0) {
+    window.scrollBy({
+      top: -70,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+}, {
+  passive: false
+});
+
+window.addEventListener("scroll", function (e) {
+  
   var top = document.documentElement.scrollTop;
   var arrow = document.querySelector('.scroll_down');
   var msg1 = document.querySelector('.message_box_1');
@@ -262,8 +287,8 @@ window.addEventListener("scroll", function () {
   }
 
   /*message_box_1*/
-  var msg1_Point1 = parseInt(scrollHeight * 8.57142857 / 100 );
-  var mag1_Point2 = parseInt(scrollHeight * 10.3333333 / 100);
+  var msg1_Point1 = parseInt(scrollHeight * 7.57142857 / 100 );
+  var mag1_Point2 = parseInt(scrollHeight * 12.3333333 / 100);
   if(top <  msg1_Point1){
     msg1.classList.remove('active')
     msg1.style.top = '100%'
