@@ -263,12 +263,14 @@ window.addEventListener("scroll", function (e) {
   }
 
   /*message_box_1*/
+
   var msg1_Point1 = parseInt(scrollHeight * 6.57142857 / 100 );
   if(!device) {
     var mag1_Point2 = parseInt(scrollHeight * 14.3333333 / 100);
   } else {
     var mag1_Point2 = parseInt(scrollHeight * 19.3333333 / 100);
   }
+
   if(top <  msg1_Point1){
     msg1.classList.remove('active')
     msg1.style.top = '100%'
